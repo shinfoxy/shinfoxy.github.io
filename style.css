@@ -20,7 +20,6 @@ body {
 	margin: 0 auto;
 	border-left: 1px solid #ddd;
 	border-right: 1px solid #ddd;
-	padding: 20px;
 	height: 100vh;
 }
 .content {
@@ -28,6 +27,7 @@ body {
 }
 header h1 {
 	position: relative;
+	margin-left: 20px;
 	font-size: 48px;
 	line-height: 48px;
 	height: 48px;
@@ -44,6 +44,13 @@ header h1:before {
 .content > section:first-child {
 	border-top: 1px dotted #ddd;
 }
+.content > section {
+	padding: 0 20px;
+	transition: .2s all ease;
+}
+.content > section:hover {
+	background-color: #ddd;
+}
 .content h2 {
 	margin-bottom: 10px;
 	padding-top: 20px;
@@ -54,3 +61,4 @@ header h1:before {
 	border-bottom: 1px dotted #ddd;
 	font-size: .8em;
 }
+
