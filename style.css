@@ -52,13 +52,24 @@ header h1:before {
 	background-color: #ddd;
 }
 .content h2 {
-	margin-bottom: 10px;
+	
 	padding-top: 20px;
 	font-size: 1.4em;
 }
-.content p {
+.content p, ol {
+	clear: both;
+	margin-top: 10px;
 	padding-bottom: 20px;
 	border-bottom: 1px dotted #ddd;
 	font-size: .8em;
 }
+.content ol li ol {
+	padding-bottom: 20px;
+	border-bottom: 1px dotted #ddd;
+	font-size: 1em;
+}
+.content ol {
+	padding-left: 20px;
+}
+
 

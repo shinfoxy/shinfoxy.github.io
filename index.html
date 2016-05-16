@@ -12,12 +12,12 @@
 </header>
 <div class="content">
 	<section>
-	  <h2>QLA</h2>
-	  <p>Per LS CH has purchased max amount of sku/item(This item is limited to 1 per customer)<br><br>= QLA</p>
+  	  <h2>QLA</h2><input type="text" class="input" id="qttI">
+	  <p>Per LS CH has purchased max amount of sku/item(This item is limited to <span id="qttO"></span> per customer)<br><br>= QLA</p>
 	</section>
 	<section>
-	  <h2>Reseller</h2>
-	  <p>Per LS CH assoc to reseller activity per eml/cc/device ID - BBY01-XXXXXXXXXXXX<br><br>= Reseller</p>
+	  <h2>Reseller</h2><input type="text" class="input" id="oNI">
+	  <p>Per LS CH assoc to reseller activity per eml/cc/device ID - <span id="oNO"></span><br><br>= Reseller</p>
 	</section>
 	<section>
 		<h2>transfer</h2>
@@ -25,5 +25,24 @@
 	</section>
 </div> <!-- content end -->
 </div>
+<script>
+	var qttI = document.getElementById("qttI");
+	var qttO = document.getElementById("qttO");
+	var oNI = document.getElementById("oNI"); 
+	var oNO = document.getElementById("oNO");
+	qttI.addEventListener("blur",trans1,false);
+	oNI.addEventListener("blur",trans2,false);
+	function trans1(){
+	  var val = qttI.value;
+	  if(!isNaN(val)) {
+	      qttO.textContent = val;
+	  }
+	}
+	// @todo BBY01-后面几位数的正则
+	function trans2(){
+	  var val = oNI.value;
+	      oNO.textContent = val;
+	}
+</script>
 </body>
 </html>
