@@ -38,7 +38,7 @@
 	timer = setInterval(function() {
 		var speed = (target-obj.offsetTop)/3;
 		var speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
-		if (Math.abs(obj.offsetTop - target < 4)) {
+		if (Math.abs(obj.offsetTop - target)< 4) {
 			clearInterval(timer);
 			obj.style.marginTop = target + "px";
 		} else {
