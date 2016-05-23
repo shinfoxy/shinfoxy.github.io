@@ -102,7 +102,7 @@ nav .title {
 	nav ul li {
 		margin-top: 1px; width: 100%;min-width: 100px;background-color: #333;
 	}
-	nav ul li.current {
+	nav ul li:hover {
 	background-color: #f60;
 }
 	nav ul li a:active {
