@@ -127,3 +127,42 @@ header .name h1 em{
     font-size: 1.4em;
     color: white;
 }
+@media only screen and (max-width: 620px) {
+
+/*header .name h1 {
+  font-size: 2em;
+}*/
+header {
+  padding: 22px 0;
+}
+/*.profile .container .left{
+  width: 96%;
+  margin: 0 auto;
+}*/
+.profile h1 {
+  font-size: 1.7em;
+}
+
+.fl, .fr {
+  float: none;
+}
+.prof-con {
+
+}
+.prof-con .left {
+  float: none;
+  width: 76%;
+  margin: 0 auto;
+}
+.prof-con .right {
+  margin-top: 20px;
+  float: none;
+  width: 100%;
+}
+
+a.select {
+  display: block;
+  line-height: 4em;
+  font-size: 2em;
+}
+
