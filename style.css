@@ -161,7 +161,7 @@ header .name h1 em{
 
 
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 675px) {
 
 /*header .name h1 {
   font-size: 2em;
@@ -170,12 +170,17 @@ header {
   padding: 22px 0;
 }
 .profile .container {
+  width: 100%;
   padding: 0;
 }
 .profile h1 {
-  font-size: 1.7em;
+  font-size: 1.5em;
+  padding: 0 calc(50% - 150px);
 }
-
+.profile .summary {
+  font-size: 1em;
+  
+}
 .fl, .fr {
   float: none;
 }
@@ -184,8 +189,11 @@ header {
 }
 .prof-con .left {
   float: none;
-  width: 76%;
-  margin: 0 auto;
+  width: 100%;
+  padding: 0 calc(50% - 150px);
+  font-size: 1.1em;
+
+  
 }
 .prof-con .right {
   margin-top: 20px;
