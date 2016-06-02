@@ -1,0 +1,157 @@
+/* hr */
+body {
+  font-family: proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+}
+a:link {
+
+}
+.clearfix {
+  display: table;
+  content: "";
+  clear: both;
+}
+/* sidebar */
+.sidebar {
+  position: fixed;
+  top: 20%;
+  left: 0;
+
+}
+.sidebar span {
+  transition: color .3s ease;
+  cursor: pointer;
+  font-size: 2em;
+}
+.sidebar span:hover {
+  color: red;
+}
+.sidebar ol {
+  display: none;
+  
+}
+.sidebar ol li {
+  margin-top: .5em;
+}
+.sidebar ol li a {
+  text-decoration: none;
+}
+
+.wrap {
+  position: relative;
+  width: 720px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  padding:20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  transition: box-shadow .3s ease;
+}
+.wrap:hover {
+  box-shadow: 0 0 5px #888;
+
+}
+
+section {
+  border-top: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+section > h2 {
+  padding-top: 10px;
+}
+.profile {
+  overflow: hidden;
+}
+.name {
+  float: left;
+  width: 25%;
+}
+.name h1 {
+  margin: 1em 0;
+  text-align: center;
+  font-size: 3em;
+  cursor: pointer;
+}
+.contact {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding-top: 0;
+  padding-left: 40px;
+}
+.contact p {
+
+}
+.contact i {
+  margin-right: .5em;
+}
+.avatar {
+  float: left;
+  width: 25%;
+}
+.avatar img {
+  float: right;
+  width: 120px;
+}
+
+/* top-nav */
+.top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0 0 3px #888;
+
+}
+.top-bg {
+  height: 28px;
+  background-color:rgba(255,255,255,.9);
+}
+.top-content {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+}
+.top-nav h1 {
+  float: left;
+  margin: 0;
+  margin-left: calc((100% - 720px)/2);
+  font-size: 1.4em;
+}
+.top-nav i {
+  margin-right: .5em;
+}
+/*.top-nav > div {
+  float: left;
+}*/
+.top-wrap {
+  width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+.top-contact {
+  display: inline-block;
+}
+.top-nav p {
+  display: inline-block;
+  margin: 0;
+  font-size: .7em;
+  line-height: 28px;
+}
+.footer {
+  background-color: #ddd;
+  padding: 20px calc(50% - 360px);
+  font-size: .8em;
+  text-align: center;
+  color: #333;
+
+}
+.footer > div {
+  margin-top: 10px;
+}
+.footer a {
+  text-decoration: none;
+  border-bottom: 1px dotted #fff;
+}
