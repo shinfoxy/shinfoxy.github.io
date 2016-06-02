@@ -91,7 +91,7 @@ section > h2 {
   width: 25%;
 }
 .avatar img {
-  float: right;
+  float: left;
   width: 120px;
 }
 
