@@ -17,6 +17,7 @@ h1 {
   margin: 0;
 }
 header {
+  position: relative;
   color: #E0002A;
 }
 header h1 {
@@ -25,26 +26,25 @@ header h1 {
   font-size: 2rem;
 }
 .order {
-  float: right;
-  position: relative;
+  position: absolute;
   right: 2rem;
-  height: 2rem;
+  width: 2em;
   line-height: 2;
+  height: 2rem;
   cursor: pointer;
 }
 .order span {
-  font-size:2rem;
-  line-height: 1;
+  position: absolute;
+  font-size:1rem;
 }
 .top-nav {
   display: none;
   position: absolute;
-  top: 3rem;
-  left: -8rem;
-  width: 10rem;
+  top: 2rem;
+  left: -6rem;
+  width: 12rem;
 }
 ul {
-
   list-style: none;
   margin: 0;
   padding: 0;
@@ -69,7 +69,7 @@ header ul li a {
   display: block;
   padding: .5rem;
   color: #0079AD;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .new {
   width: 100%;
