@@ -21,10 +21,10 @@ a:link {
 .sidebar span {
   transition: color .3s ease;
   cursor: pointer;
-  font-size: 2em;
+  font-size: 1em;
 }
 .sidebar span:hover {
-  color: red;
+  color: #000;
 }
 .sidebar ol {
   display: none;
