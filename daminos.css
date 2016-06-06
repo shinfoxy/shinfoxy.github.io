@@ -6,7 +6,14 @@
     0079AD font blue
     E0002A font red
  */
-
+a {
+  text-decoration: none; 
+}
+ol,ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
 html {
   font-size: 62.5%;
 }
@@ -25,49 +32,96 @@ header h1 {
   text-align: center;
   font-size: 2rem;
 }
-.order {
-  position: absolute;
-  right: 2rem;
 
+
+section.info {
+  margin: 2rem 0;
+}
+
+.info > ul {
+  overflow: hidden;
+}
+
+.info > ul > li {
+  margin-right: 1rem;
+  float: left;
+}
+.info > ul > li > a, .info > ul > li > span{
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.login a {
+  color: #E0002A;
+  padding-left: 2rem;
+  background: url(images/dominos.png) no-repeat -10px -1197px;
+}
+.login a em {
+  margin-left: .3rem;
+  border: 5px solid #CCC;
+  border-width: 5px 0 5px 5px;
+  border-color: #fff #FA001F;
+  display: inline-block;
+}
+.register a {
+  color: #0079AD;
+}
+.register a em {
+  margin-left: .3rem;
+  border: 5px solid #CCC;
+  border-width: 5px 0 5px 5px;
+  border-color: #fff #0079AD;
+  display: inline-block;
+}
+.hotline span {
+  padding-left: 2rem;
+  color: #0079AD;
+}
+/* start */
+
+.order {
+  position: relative;
   cursor: pointer;
 }
 .order span {
+  display: block;
+  padding: .4rem 2rem;
+  border:2px solid #ddd;
+  border-radius: 3px;
   font-size: 2rem;
+  color: #fff;
+  background-color: red;
 }
-.top-nav {
+.order-list {
   display: none;
   position: absolute;
   top: 3.2rem;
   right: -1.8rem;
   width: 12rem;
 }
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.order-list ul {
   border: 1px solid #ddd;
   border-radius: 5px;
   text-align: center;
   background-color: #fff;
 }
-a {
-  text-decoration: none; 
-}
-header ul {
-
-}
-header ul li {
+.order-list ul li {
   border-bottom: 1px solid #ddd;
 }
-.new {
-
-}
-header ul li a {
+.order-list ul li a {
   display: block;
   padding: 1rem 0;
   color: #0079AD;
   font-size: 1.5rem;
 }
+
+
+
+.new {
+
+}
+
+
+/* end */
 .new {
   width: 100%;
 }

@@ -11,7 +11,7 @@
   <script type="text/javascript">
     window.onload = function () {
       var btn = document.getElementById("order");
-      var list = document.getElementById("top-nav");
+      var list = document.getElementById("order-list");
       var flag = 0;
       btn.onclick = function() {
         if (flag == 0) {
@@ -27,25 +27,31 @@
 </head>
 <body>
 <header>
-  <div class="order" id="order">
-    <span>订餐</span>
-    <nav class="top-nav" id="top-nav">
-      <ul>
-        <li><a class="" href="#">最新优惠</a></li>
-        <li><a href="#">套餐</a></li>
-        <li><a href="#">比萨</a></li>
-        <li><a href="#">面饭</a></li>
-        <li><a href="#">甜品及饮料</a></li>
-        <li><a href="#">门店查询</a></li>
-        <li><a href="#">DIY订餐</a></li>
-        <li><a href="#">登录</a></li>
-        <li><a href="#">注册</a></li>
-      </ul>
-    </nav>
-  </div>
   <h1>达美乐披萨网上订餐</h1>
 </header>
-
+<section class="info">
+  <ul>
+    <li class="hotline"><span>4001-597-597</span></li>
+    <li class="login"><a href="#">登录<em></em></a></li>
+    <li class="register"><a href="#">马上注册<em></em></a></li>
+    <li class="order" id="order">
+      <span>开始订餐</span>
+      <nav class="order-list" id="order-list">
+        <ul>
+          <li><a href="#">最新优惠</a></li>
+          <li><a href="#">套餐</a></li>
+          <li><a href="#">比萨</a></li>
+          <li><a href="#">面饭</a></li>
+          <li><a href="#">甜品及饮料</a></li>
+          <li><a href="#">门店查询</a></li>
+          <li><a href="#">DIY订餐</a></li>
+          <li><a href="#">登录</a></li>
+          <li><a href="#">注册</a></li>
+        </ul>
+    </nav>
+    </li>
+  </ul>
+</section>
 <section class="new">
   <img src="images/banner.jpg" alt="新品">
 </section>
