@@ -62,6 +62,8 @@ aside {
   position: fixed;
   float: left;
   width: 240px;
+  height: 100vh;
+  border-right: 1px solid #ddd;
   box-sizing: border-box;
 }
 aside h2 li {
@@ -85,7 +87,6 @@ aside li a.active {
   float: right;
   width: 800px;
   height: 200vh;
-  border-left: 1px solid #ddd;
   box-sizing: border-box;
 }
 
