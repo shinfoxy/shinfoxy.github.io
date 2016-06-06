@@ -7,19 +7,50 @@
   <title>达美乐</title>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="daminos.css">
-
+  <script type="text/javascript">
+    window.onload = function () {
+      var btn = document.getElementById("order");
+      var list = document.getElementById("top-nav");
+      var flag = 0;
+      btn.onclick = function() {
+        if (flag == 0) {
+          list.style.display = "block";
+          flag = 1;
+        } else {
+          list.style.display = "none";
+          flag = 0;
+        }
+      }
+    }
+  </script>
 </head>
 <body>
 <header>
+  <div class="order" id="order">
+    <span>订餐</span>
+    <nav class="top-nav" id="top-nav">
+      <ul>
+        <li><a class="" href="#">最新优惠</a></li>
+        <li><a href="#">套餐</a></li>
+        <li><a href="#">比萨</a></li>
+        <li><a href="#">面饭</a></li>
+        <li><a href="#">甜品及饮料</a></li>
+        <li><a href="#">门店查询</a></li>
+        <li><a href="#">DIY订餐</a></li>
+        <li><a href="#">登录</a></li>
+        <li><a href="#">注册</a></li>
+      </ul>
+    </nav>
+  </div>
   <h1>达美乐披萨网上订餐</h1>
-  <nav>
-    <ul>
-      <li><a href="#">最新优惠</a></li>
-      <li><a href="#">套餐</a></li>
-      <li><a href="#">比萨</a></li>
-      <li><a href="#">面饭</a></li>
-    </ul>
-  </nav>
 </header>
+
+<section class="new">
+  <img src="images/banner.jpg" alt="新品">
+</section>
+
+<section class="caro">
+  <img src="images/caro0.png" alt="00">
+</section>
 </body>
 </html>

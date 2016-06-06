@@ -2,7 +2,9 @@
 /*
     @html fontSize: 75%;  / 16*75%=10px
     @body max-width: 30rem; / 30*12=300px
-    16px 
+    @color 
+    0079AD font blue
+    E0002A font red
  */
 
 html {
@@ -19,34 +21,65 @@ header {
 }
 header h1 {
   text-align: center;
-  padding: .5rem 0;
+  margin: 1rem 0;
   font-size: 2rem;
 }
-nav {
-  margin-top: 1rem;
-  border-top: 1px solid #0079AD;
-  border-bottom: 1px solid #0079AD;
+.order {
+  float: right;
+  position: relative;
+  right: 2rem;
+  height: 2rem;
+  line-height: 2;
+  cursor: pointer;
+}
+.order span {
+  font-size:2rem;
+  line-height: 1;
+}
+.top-nav {
+  display: none;
+  position: absolute;
+  top: 3rem;
+  left: -8rem;
+  width: 10rem;
 }
 ul {
+
   list-style: none;
   margin: 0;
   padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fff;
 }
 a {
   text-decoration: none; 
 }
 header ul {
-  display: flex;
+
 }
 header ul li {
-  width: 25%;
-  text-align: center;
+  border-bottom: 1px solid #ddd;
 }
+.new {
 
+}
 header ul li a {
   display: block;
   padding: .5rem;
   color: #0079AD;
   font-size: 2rem;
-
+}
+.new {
+  width: 100%;
+}
+.new img {
+  width: inherit;
+}
+.caro {
+  width: 100%;
+}
+.caro img {
+  width: inherit;
 }
