@@ -28,19 +28,17 @@ header h1 {
 .order {
   position: absolute;
   right: 2rem;
-  width: 2em;
-  line-height: 2;
-  height: 2rem;
+
   cursor: pointer;
 }
 .order span {
-  font-size: 1rem;
+  font-size: 2rem;
 }
 .top-nav {
   display: none;
   position: absolute;
-  top: 3rem;
-  left: -8em;
+  top: 4rem;
+  right: -2rem;
   width: 12rem;
 }
 ul {
@@ -66,7 +64,7 @@ header ul li {
 }
 header ul li a {
   display: block;
-  padding: .5rem;
+  padding: 1rem 0;
   color: #0079AD;
   font-size: 1.5rem;
 }
