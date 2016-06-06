@@ -17,12 +17,12 @@ h1 {
   margin: 0;
 }
 header {
+  margin: 1rem 0;
   position: relative;
   color: #E0002A;
 }
 header h1 {
   text-align: center;
-  margin: 1rem 0;
   font-size: 2rem;
 }
 .order {
@@ -34,14 +34,13 @@ header h1 {
   cursor: pointer;
 }
 .order span {
-  position: absolute;
-  font-size:1rem;
+  font-size: 1rem;
 }
 .top-nav {
   display: none;
   position: absolute;
-  top: 2rem;
-  left: -6rem;
+  top: 3rem;
+  left: -8em;
   width: 12rem;
 }
 ul {
