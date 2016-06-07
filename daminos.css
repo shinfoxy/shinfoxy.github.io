@@ -114,6 +114,9 @@ header {
 .order-list ul li {
   border-bottom: 1px solid #ddd;
 }
+.order-list ul li:last-child {
+  border-bottom: none;
+}
 .order-list ul li a {
   display: block;
   padding: 1rem 0;
