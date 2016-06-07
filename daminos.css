@@ -21,16 +21,8 @@ body {
 
 }
 h1 {
-  margin: 0;
 }
 header {
-  margin: 1rem 0;
-  position: relative;
-  color: #E0002A;
-}
-header h1 {
-  text-align: center;
-  font-size: 2rem;
 }
 
 .clearfix {
@@ -38,66 +30,79 @@ header h1 {
   display: table;
   clear: both;
 }
-section.info {
+.heading1 {
+  width: 100%;
 }
-
-.info > ul {
-}
-
-.info > ul > li {
-  margin-right: 1rem;
+.logo {
   float: left;
 }
-.info > ul > li > a, .info > ul > li > span{
-  font-weight: 700;
-  font-size: 1.4rem;
+.login {
+  float: right;
+  margin-right: 2rem;
 }
 .login a {
-  color: #E0002A;
+  display: inline-block;
+  font-size: 1.6rem;
+  margin-top: 1.1rem;
   padding-left: 2rem;
+}
+.log {
+  color: #E0002A;
   background: url(images/dominos.png) no-repeat -10px -1197px;
 }
-.login a em {
+.log em {
   margin-left: .3rem;
   border: 5px solid #CCC;
   border-width: 5px 0 5px 5px;
   border-color: #fff #FA001F;
   display: inline-block;
 }
-.register a {
+.reg {
   color: #0079AD;
 }
-.register a em {
+.reg em {
   margin-left: .3rem;
   border: 5px solid #CCC;
   border-width: 5px 0 5px 5px;
   border-color: #fff #0079AD;
   display: inline-block;
 }
-.hotline span {
-  padding-left: 2rem;
-  color: #0079AD;
+.heading2 {
+  /*margin-top: 1rem;*/
+  width: 100%;
 }
-/* start */
+.hotline {
+  float: left;
+  color: #0079AD;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.hotline span {
+  display: inline-block;
+  margin-top: 1.2rem;
+  margin-left: 2rem;
+}
 
 .order {
   position: relative;
-  cursor: pointer;
+  float: right;
+  padding-right: 4rem;
 }
-.order span {
+.order > a {
   display: block;
-  padding: .4rem 2rem;
-  border:2px solid #ddd;
-  border-radius: 3px;
-  font-size: 2rem;
+  padding: 1rem 2rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  background: linear-gradient(37deg, #E0002A 0, red 100%);
   color: #fff;
-  background-color: red;
+  font-size: 1.6rem;
 }
+
 .order-list {
   display: none;
   position: absolute;
-  top: 2.8rem;
-  right: -1.8rem;
+  top: 4rem;
+  left: 0;
   width: 12rem;
 }
 .order-list ul {
