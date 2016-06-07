@@ -22,8 +22,7 @@ body {
 }
 h1 {
 }
-header {
-}
+
 
 .clearfix {
   content: "";
@@ -144,4 +143,101 @@ header {
 }
 .caro img {
   width: inherit;
+}
+
+/* youhui */
+.g-heading {
+  position: relative;
+  background-color: #0079AD;
+  color: #fff
+}
+.g-heading  h2 {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 4rem;
+}
+.g-heading > a {
+  position: absolute;
+  top: 1rem;
+  display: block;
+  padding: .4rem 1rem;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  color: #fff;
+
+}
+.g-heading a.back {
+  left: 2rem;
+}
+.g-heading a.shopcar {
+  right: 2rem;
+}
+.sub-nav {
+  margin-top: 1rem;
+}
+.sub-nav ul {
+  overflow: hidden;
+}
+.sub-nav ul li  {
+  float: left;
+  text-align: center;
+  font-size: 1.6rem;
+  width: 33.3333%;
+}
+.sub-nav ul li.active a {
+  text-decoration: underline;
+}
+
+.box {
+  margin-top: 1rem;
+}
+.head {
+  padding-left: 3rem;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+  background-color: #0079AD;
+}
+
+.body {
+  border: 4px solid #0079AD;
+  padding: .4rem;
+}
+.meal-list {
+}
+.meal-list li {
+  position: relative;
+  overflow: hidden;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #0079AD;
+}
+.meal-list .img {
+  float: left;
+  width: 45%;
+}
+.meal-list img {
+  width: 100%;
+}
+
+.desc {
+  float: right;
+  width: 50%;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight:700;
+  margin-bottom: 1rem;
+}
+.meal-list .order {
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  padding-right: 0;
+
+}
+.meal-list .order a {
+  font-size: 1.2rem;
 }
