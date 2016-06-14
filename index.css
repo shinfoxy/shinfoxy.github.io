@@ -1,4 +1,5 @@
 /* index.css */
+/* @workaround .right .mask 机械包裹*/
 
 a {
   text-decoration: none;
@@ -21,12 +22,18 @@ header {
   left: 0;
   background-color: rgb(34,34,34);
   width: 100%;
+  z-index: 999;
 }
 header .container {
   width: 1080px;
   margin: 0 auto;
-  font-size: 0;
 }
+header h2 {
+  padding: 6px calc(50% - 200px);
+  font-size: 24px;
+  color: #fff;
+}
+/*
 .top-nav {
   display: inline-block;
   font-size: 14px;
@@ -51,7 +58,7 @@ header .container {
 }
 .top-nav ul li {
   display: inline-block;
-}
+}*/
 .title {
   display: inline-block;
   font-size: 18px;
@@ -59,9 +66,8 @@ header .container {
   color: #fff;
 }
 .qa {
-  display: inline-block;
+  margin-top: 20px;
   font-size: 12px;
-  margin-left: 20px;
   color: #aaa;
   cursor: help;
 }
@@ -115,9 +121,15 @@ aside.profile {
   margin-top: 12px;
   padding: 6px 24px;
   border-radius: 16px;
+  border: 1px solid #138185;
+  background-color: #fff;
+  color: #138185;
+  cursor: default;
+  transition: all .3s ease;
+}
+.avatar .status:hover {
   background-color: #138185;
   color: #fff;
-  cursor: default;
 }
 .contact {
   margin-top: 20px;
@@ -148,7 +160,6 @@ aside.profile {
 .section h2 {
   font-size: 24px;
   color: #138185;
-  font-weight: 700;
 }
 a.underline {
   text-decoration: underline;
@@ -163,77 +174,28 @@ a.underline {
   position: relative;
   width: 39%;
 }
-.right img {
-  width: 100%;
-  height: 100%;
+.desc dd {
+  line-height: 1.5;
 }
-.right:hover .desc {
-  opacity: 1;
-}
-.right:hover .mask {
-  opacity: .3;
-}
-.right .desc {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+/* Hard Icon*/
+.hard::after {
+  content: "hard";
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  padding: 0 2px;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: red;
   color: #fff;
+}
+.right h3 {
   font-size: 20px;
-  text-align: center;
-  z-index: 1;
-  transition: all .3s ease;
-  opacity: 0;
 }
-.right .desc::before {
-  position: absolute;
-  content: " ";
-  top: 50%;
-  left: -60px;
-  width: 50px;
-  height: 1px;
-  background-color: #fff;
+.work li:hover a {
+  color: #138185;
 }
-.right .desc::after {
-  position: absolute;
-  content: " ";
-  top: 50%;
-  right: -60px;
-  width: 50px;
-  height: 1px;
-  background-color: #fff;
-}
-.right .mask {
-  position: absolute;
- /* top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;*/
-  top:0;
-  left: 0;
-  width: 312px;
-  height: 235px;
-  background-color: #000;
-  opacity: 0;
+.work li a {
+  line-height:1.5;
   transition: all .3s ease;
 }
-/*@keyframes shake {
-  20% {
-    transform: translateX(-4px);
-  }
-  40% {
-    transform: translateX(4px);
-  }
-  60% {
-    transform: translateX(-4px);
-  }
-  80% {
-    transform: translateX(4px);
-  }
-  0%, 100% {
-    transform: translateX(0);
-  }
-}
-.qa:hover {
-  animation: shake 200ms ease infinite;
-}*/
