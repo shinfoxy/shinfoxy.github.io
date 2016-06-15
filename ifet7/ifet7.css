@@ -17,7 +17,7 @@ body {
 .g-header::before,.g-header::after,
 .g-nav ul::before,.g-nav ul::after,
 .feature ul::before, .feature ul::after,
-.container::before,.container::after 
+.container::before,.container::after,
 .caro::before, .caro::after{
   content: "";
   display: table;
