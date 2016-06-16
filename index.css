@@ -1,6 +1,9 @@
 /* index.css */
-/* @workaround .right .mask 机械包裹*/
-
+/* 
+@workaround 
+@color query
+*/
+/* css reset */
 a {
   text-decoration: none;
 }
@@ -16,6 +19,9 @@ body {
   font-size: 14px;
   font-family: "Helvetica Neue",Helvetica,STHeiTi,"Microsoft YaHei",sans-serif;
 }
+/* index */
+/* common */
+
 header {
   position: fixed;
   top: 0;
@@ -33,43 +39,12 @@ header h2 {
   font-size: 24px;
   color: #fff;
 }
-/*
-.top-nav {
-  display: inline-block;
-  font-size: 14px;
-}
 
-.top-nav a {
-  display: block;
-  padding: 1em;
-  text-decoration: none;
-  color: rgb(153,153,153);
-  transition: all .2s ease;
-
-}
-.top-nav a:hover {
-  color: #fff;
-  background-color: #138185;
-}
-.top-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.top-nav ul li {
-  display: inline-block;
-}*/
-.title {
-  display: inline-block;
-  font-size: 18px;
-  margin-left: 360px;
-  color: #fff;
-}
 .qa {
   margin-top: 20px;
   font-size: 12px;
   color: #aaa;
-  cursor: help;
+  cursor: default;
 }
 
 section.container {
@@ -145,9 +120,55 @@ aside.profile {
   height: 200vh;
   box-sizing: border-box;
 }
+.left {
+  float: left;
+  width: 31%;
+}
+
+.right {
+  float: right;
+  width: 68%;
+}
+/* left */
+.left .skills {
+  display: block;
+  box-sizing: border-box;
+  padding: 15% 0;
+  border: 1px solid #5B9BD5;
+  color: #5B9BD5;
+  font-size: 24px;
+  text-align: center;
+  cursor: default;
+  transition: all .3s ease-in-out;
+}
+.left .skills:hover {
+  background-color: #5B9BD5;
+  color: #fff;
+}
+/* right */
+.right .works{
+  padding: 0 0 0 8%;
+}
+.works li {
+  margin-bottom: 20px;
+}
+.works li a {
+  margin-right: 20px;
+}
+.works li a:hover {
+  text-decoration: underline;
+}
+.works li a:first-child {
+  color: #DAA520;
+}
+.works li a:nth-child(2) {
+  color: #AAA
+}
+.works li a:last-child {
+  color: #BBB;
+}
 .greetings {
   font-size: 24px;
-
 }
 
 .section {
@@ -158,23 +179,12 @@ aside.profile {
   display: table;
   clear: both;
 }
-.section h2 {
-  font-size: 24px;
-  color: #138185;
-}
+
 a.underline {
   text-decoration: underline;
   color: #138185;
 }
-.left {
-  float: left;
-  width: 55%;
-}
-.right {
-  float: right;
-  position: relative;
-  width: 39%;
-}
+
 .desc dd {
   line-height: 1.5;
 }
