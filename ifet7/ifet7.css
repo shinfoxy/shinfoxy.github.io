@@ -440,6 +440,7 @@ body {
 
 .leftA {
   position: relative;
+  z-index: -1;
   float: left;
   width: 66%;
   height: 563px;
@@ -455,10 +456,10 @@ body {
   color: #fff;
   text-align: center;
 }
-.left-desc::after {
+.leftA::after {
   position: absolute;
   z-index: 999;
-  right: -263px;
+  right: 0;
   top: 44%;
   content: "";
   width: 0;
