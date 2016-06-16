@@ -86,6 +86,7 @@ aside.profile {
   height: 100vh;
   border-right: 1px solid #ddd;
   box-sizing: border-box;
+  background-color: #fff;
 }
 .profile {
 }

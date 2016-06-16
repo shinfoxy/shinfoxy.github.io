@@ -12,6 +12,7 @@ bf4f49  red
 
 body {
   font-size: 87.5%;
+  font-family: "Helvetica Neue",Helvetica,STHeiTi,"Microsoft YaHei",sans-serif;
 }
 /* clear float */
 .g-header::before,.g-header::after,
