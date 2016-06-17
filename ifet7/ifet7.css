@@ -134,6 +134,8 @@ body {
 }
 .g-footer-submit {
   font-size: 0;
+  width: 510px;
+  margin: 0 auto;
 }
 .g-footer-submit a {
   display: inline-block;
