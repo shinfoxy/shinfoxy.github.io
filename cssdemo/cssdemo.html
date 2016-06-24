@@ -5,6 +5,52 @@
   <title>CSS DEMO</title>
   <link rel="stylesheet" href="../reset.css">
   <link rel="stylesheet" href="cssdemo.css">
+  <script>
+  // Hide the default validation msg as
+  window.onload = function() {
+    // Obtain DOM
+    var form = document.getElementById('no2');
+        submit = document.getElementById('login-submit'),
+        inputs = document.getElementById('username-input'),
+        inputsLen,
+        input,
+        inputMsg,
+        inputValidationMsg;
+
+
+    form.addEventListener('invalid',function(e) {
+      e.preventDefault();
+    },true);
+    // Validate form on submit - display tooltip if input has no value 
+    btn.onclick = function() {
+      inputsLen = inputs.length;
+      while(inputsLen--) {
+        if(inputs[inputsLen].value.length>0) {
+          return true;
+        }
+        next(inputs[inputsLen]).nextSibling.style.display = 'block';
+      }
+    }
+    while(inputsLen--) {
+      input = inputs[inputsLen];
+      label = next(input);
+      if (input.hasAttibute('data-validation-msg')) {
+        // create span element for our validation msg
+        inputValidationMsg = input.getAttibute('data-validation-msg');
+        inputMsg = document.createElement('span');
+        inputMsg.innerHTML = inputValidationMsg;
+        // Add our own validation msg element so we can style it
+        label.parentNode.insetBefore(inputMsg,lable.nextSibling);
+        input.onblur = function(e) {
+          // if value does not exist or is invalid, toggle validation msg
+          e.target.classList.add('blur');
+          next(e.target).nextSibling.style.display = (!this.value || this.validity.valid === false) ? 'block' : 'none';
+        }
+      }
+    }
+  }
+      
+  </script>
 </head>
 <body>
   <div class="wrap">
@@ -19,6 +65,19 @@
             <a class="tooltip" href="#">Hover me<span>(The website rocks)</span></a>
           ,then you can see the tooltips,similar but smarter than "title".
           </p></li>
+        <li class="no2" id="no2">
+          <h4>登录表单</h4>
+          <p>
+            <form action="" id="no2">
+              <fieldset>
+                <input id="username-input" type="text" name="username" placeholder="Username" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,12}$" data-validation-msg="Username must be 2-12 characaters" required>
+                <label for="username" data-icon="&#128100;">Username</label>
+                <input type="password" name="password" placeholder="Password" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,12}$" data-validation-msg="Password must be 2-12 characters" required>
+                <label for="password" data-icon="&#128274;">Password</label>
+                <button id="login-submit" value="submit" data-icon="&#58542;"></button>
+              </fieldset>
+            </form>
+          </p></li> 
       </ol>
     </div>
   </div>

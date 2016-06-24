@@ -40,5 +40,8 @@ a.tooltip:hover span {
   border: 1px solid #996633;
   background-color: #FFFF66;
   color: #000;
+}
 
+#no2 input {
+  color: #000;
 }

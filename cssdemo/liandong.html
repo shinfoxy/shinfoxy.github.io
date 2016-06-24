@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>js的二级联动菜单</title>
+        <script type="text/javascript">
+        var arr_province =['请选择省份/市','北京市','上海市','安徽省','湖南省','江苏省','广东省']
+        var arr_city =[
+                ['请选择市/区'],
+                ['东城区','西城区','朝阳区','海淀区','丰台区','大兴区','昌平区','通州区'],
+                ['黄浦区','徐汇区','长宁区','闵行区','杨浦区','宝山区','奉贤区'],
+                ['合肥市','芜湖市','阜阳市','安庆市','巢湖市','淮南市','淮北市','六安市','池州市'],
+                ['长沙市','株洲市','湘潭市','邵阳市','岳阳市','常德市','益阳市'],
+                ['南京市','苏州市','无锡市','南通市','盐城市','镇江市'],
+                ['广州市','东莞市','深圳市','江门市','佛山市','中山市','梅州市','清远市']
+                      ]
+           window.onload = init;
+           function init(){
+             var province = document.form1.province;
+             var city = document.form1.city;
+             province.length = arr_province.length;
+             for(var i=0;i<arr_province.length;i++){
+              province.options[i].text = arr_province[i];
+              province.options[i].value = arr_province[i];
+             }
+             var index = 0;
+             province.selectedIndex = index;
+             city.length = arr_city[index].length;
+             for (var j = 0; j < arr_city[index].length; j++) {
+              city.options[j].text = arr_city[index][j];
+              city.options[j].value = arr_city[index][j];
+             };
+           }           
+           function changeOption(index){
+              var province = document.form1.province;
+              var city = document.form1.city;
+              city.length = arr_city[index].length;
+               for (var j = 0; j < arr_city[index].length; j++) {
+                city.options[j].text = arr_city[index][j];
+                city.options[j].value = arr_city[index][j];
+               };
+           }
+        </script>
+    </head>
+    <body>
+      <form name="form1">
+        <select name="province" onchange="changeOption(this.selectedIndex)"></select>
+        <select name="city"></select>
+      </form>
+    </body>
+</html>

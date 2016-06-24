@@ -3,20 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello World</title>
+  <link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="index.css">
-  <script>
-    
-  </script>
 </head>
 <body>
   <header>
     <div class="container">
-      <!-- <nav class="top-nav">
-        <ul>
-          <li><a href="index.html" id="works">作品页面</a></li>
-        </ul>
-      </nav> -->
       <h2>正在找工作，前端开发方向</h2>
     </div>
   </header>
@@ -47,34 +40,124 @@
         <p class="qa">我的作品集</p>
       </div>
       <section class="section">
-        <div class="left">
-          <div class="">
-            <span class="skills">从PSD到静态页面</span>
+          <div class="heading">
+            <h4>从PSD到静态页面</h4>
           </div>
-          <div class="skills-desc" style="display:none">利用HTML和CSS排版</div>
-        </div>
-        <div class="right">
-          <ul class="works">
-            <li><a href="ifet7/ifet7.html">IFE任务七</a><a href="http://ife.baidu.com/task/detail?taskId=7">任务说明</a><a href="http://7xrp04.com1.z0.glb.clouddn.com/task_1_7_2.jpg">样张效果图</a></li>
-            
-          </ul>
-        </div>
+          <div class="psd">
+            <div class="psd-col psd-md">
+              <div>
+                <h5>静态WEB单页（一）</h5>
+                <a href="ifet7/ifet7.html">
+                  <div class="psd-item" style="background:url(images/thumb_1.png) no-repeat;background-size:cover;">
+                    <div class="mask" style="display:none;"></div>
+                    <div class="desc">
+                      <h6>IFE任务7</h6>
+                    </div>
+                    <div class="bar bar-left"></div>
+                    <div class="bar bar-right"></div>
+                  </div>
+                </a>
+              </div>
+              <div>
+                <h5>静态WEB单页（二）</h5>
+                <a href="ifet7/ifet7.html">
+                  <div class="psd-item" style="background:url(images/thumb_3.png) no-repeat;background-size:cover;">
+                    <div class="mask" style="display:none;"></div>
+                    <div class="desc">
+                      <h6>IFE任务11</h6>
+                    </div>
+                    <div class="bar bar-left"></div>
+                    <div class="bar bar-right"></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="psd-col psd-md">
+              <div>
+                <h5>移动端页面</h5>
+                <div class="psd-item" style="background:url(images/thumb_2.png) no-repeat;background-size:cover;">
+                  <div class="mask" style="display:none;"></div>
+                  <div class="desc">
+                    <h6>IFE任务9</h6>
+                  </div>
+                  <div class="bar bar-left"></div>
+                  <div class="bar bar-right"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="expl help">
+            IFE是<a href="http://ife.baidu.com/">百度前端技术学院</a>简称，其课程任务由百度前端工程师专为对前端不同掌握程度的同学设计。
+          </div>
       </section>
       <section class="section">
-        <div class="left">
-          <div class="">
-            <span class="skills">Javascript基础</span>
+          <div class="heading">
+            <h4>CSS3</h4>
           </div>
-        </div>
-        <div class="right">
           <ul class="works">
-            <li><span>表单操作</span></li>
-            <li><a href="jsdemo/jsdemo.html">自动选定文本内容</a></li>
+            <li><a href="#">Placeholder</a></li>
+            <li><a href="#">Placeholder</a></li>
+            <li><a href="#">Placeholder</a></li>
+            <li><a href="#">Placeholder</a></li>
+            <li><a href="#">Placeholder</a></li>
+            <li><a href="#">Placeholder</a></li>
+            <li><a href="#">Placeholder</a></li>
           </ul>
-        </div>
+      </section>
+      <section class="section">
+          <div class="heading">
+            <h4>Javascript</h4>
+          </div>
+          <ul class="works">
+            <li><a href="#">Placeholder</a></li>
+            <li><a href="#">Placeholder</a></li>
+            <li><a href="#">Placeholder</a></li>
+            <li><a href="#">Placeholder</a></li>
+            <li><a href="#">Placeholder</a></li>
+            <li><a href="#">Placeholder</a></li>
+            <li><a href="#">Placeholder</a></li>
+          </ul>
+      </section>
+      <section class="section">
+          <div class="heading">
+            <h4>jQuery</h4>
+          </div>
+          <ul class="works">
+            <li><a href="jsdemo/jsdemo.html">Placeholder</a></li>
+          </ul>
+      </section>
+      <section class="section">
+          <div class="heading">
+            <h4>Bootstrap</h4>
+          </div>
+          <ul class="works">
+            <li><a href="jsdemo/jsdemo.html">Placeholder</a></li>
+          </ul>
       </section>
       
     </div>
   </section>
 </body>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+// @workaround 这个hover有animation的bug
+    $('.psd-item').hover(function(){
+      $(this).find('.mask').filter(':not(:animated)').fadeIn(350);
+      $(this).find('.bar-left').css({'left':'8em','opacity':'1'});
+      $(this).find('.bar-right').css({'right':'8em','opacity':'1'});
+      $(this).find('.desc').filter(':not(:animated)')
+      .css({'bottom':'50%','opacity':'1'});
+    },function(){
+      $(this).find('.mask').fadeOut(350);
+      $(this).find('.bar-left').css({'left':'5em','opacity':'0'});
+      $(this).find('.bar-right').css({'right':'5em','opacity':'0'});
+      $(this).find('.desc')
+      .css({'bottom':'40%','opacity':'0'});
+    });
+    $('.help').hover(function(){
+      $(this).find('a').addClass('active');
+    }, function(){
+      $(this).find('a').removeClass('active');
+    })
+</script>
 </html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+    .wrap {
+      width: 600px;
+      margin: 0 auto;
+    }
+    input {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div>
+    <form>
+      <div>
+        <label for="input">Email</label>
+        <input type="text" id="input" >
+        <p id="output">请输入邮箱</p>
+      </div>
+      <!-- <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Password">
+      </div>
+      <div>
+        <div>
+          <label>
+            <input type="checkbox">Remember me
+          </label>
+        </div>
+      </div> -->
+      <div>
+        <div>
+          <button id="submit">Sign in</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div> <!-- close wrap  -->
+<script>
+  var input  = document.getElementById('input'),
+      output = document.getElementById('output'),
+      button = document.getElementById('submit');
+      // input.onclick = validate;
+  function eventHandler(){
+    button.onclick = function(e){
+      // 阻止form内的button的默认事件，虽然我还不知道是什么。6/22
+     e.preventDefault();
+     validate();
+    }
+  };
+  eventHandler();
+  function validate() {
+    var inputValue = input.value;
+    if(strlength(inputValue) == 0) {
+      output.innerHTML = '姓名不能为空';
+      input.style.border = '1px solid red';
+      output.style.color = 'red';
+    } else if(strlength(inputValue) >=4 && strlength(inputValue) <= 16) {
+      output.innerHTML = '正确';
+      input.style.border = '1px solid green';
+      output.style.color = 'green';
+    } else if(strlength(inputValue) >16 || strlength(inputValue) < 4) {
+      output.innerHTML = '不正确';
+      input.style.border = '1px solid blue';
+      output.style.color = 'blue';
+    }
+  };
+  function strlength(str) {
+    var inputLength = 0;
+    for(var i = 0; i < str.length; i++) {
+      var countCode = str.charCodeAt(i);
+      if(countCode >= 0 && countCode <= 128) {
+        inputLength += 1;
+      } else {
+        inputLength += 2;
+      }
+    }
+    return inputLength;
+ };
+
+ 
+
+</script>
+</body>
+</html>

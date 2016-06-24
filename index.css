@@ -3,18 +3,11 @@
 @workaround 
 @color query
 */
-/* css reset */
-a {
-  text-decoration: none;
-}
+
 a:link,a:visited {
   color:#000;
 }
-ol,ul { 
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+
 body {
   font-size: 14px;
   font-family: "Helvetica Neue",Helvetica,STHeiTi,"Microsoft YaHei",sans-serif;
@@ -31,13 +24,13 @@ header {
   z-index: 999;
 }
 header .container {
-  width: 1080px;
   margin: 0 auto;
 }
 header h2 {
   padding: 6px calc(50% - 200px);
   font-size: 24px;
   color: #fff;
+  text-align: center;
 }
 
 .qa {
@@ -49,16 +42,18 @@ header h2 {
 
 section.container {
   width: 1080px;
-  margin: 44px auto;
-  padding: 2em 0 0 0;
+  margin: 41px auto;
+  /*padding: 2em 0 0 0;*/
   overflow: hidden;
 }
 
 aside.profile {
   position: fixed;
   float: left;
-  width: 240px;
+  width: 18%;
+  min-width: 220px;
   height: 100vh;
+  padding-top: 40px;
   border-right: 1px solid #ddd;
   box-sizing: border-box;
   background-color: #fff;
@@ -116,56 +111,113 @@ aside.profile {
 }
 .main {
   float: right;
-  width: 800px;
-  height: 200vh;
+  padding-top: 40px;
+  width: 76%;
+  min-width: 800px;
   box-sizing: border-box;
 }
-.left {
-  float: left;
-  width: 31%;
+.heading {
+  margin-bottom: 20px;
+}
+.heading h4 {
+  display: inline-block;
+  font-size: 1.4em;
+  color: #138185;
+  cursor: default;
 }
 
-.right {
-  float: right;
-  width: 68%;
-}
-/* left */
-.left .skills {
-  display: block;
-  box-sizing: border-box;
-  padding: 15% 0;
-  border: 1px solid #5B9BD5;
-  color: #5B9BD5;
-  font-size: 24px;
-  text-align: center;
-  cursor: default;
-  transition: all .3s ease-in-out;
-}
-.left .skills:hover {
-  background-color: #5B9BD5;
-  color: #fff;
-}
-/* right */
-.right .works{
-  padding: 0 0 0 8%;
+/* works */
+.works {
+  font-size: 0;
 }
 .works li {
+  display: inline-block;
+  width: 25%;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  font-size: 14px;
   margin-bottom: 20px;
 }
 .works li a {
-  margin-right: 20px;
-}
-.works li a:hover {
-  text-decoration: underline;
-}
-.works li a:first-child {
-  color: #DAA520;
-}
-.works li a:nth-child(2) {
-  color: #AAA
+  display: block;
+  padding: 20px;
+  text-align: center;
+  background-color: #138185;
 }
 .works li a:last-child {
-  color: #BBB;
+}
+/* psd-works */
+
+.psd {
+  font-size: 0;
+}
+.psd-col {
+  display: inline-block;
+  font-size: 14px;
+  width: 50%;
+  min-height: 450px;
+  box-sizing: border-box;
+  padding: 0 2% 0 0;
+  vertical-align: top;
+}
+
+.psd-col h5 {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 14px;
+  margin-top: 14px;
+}
+
+.psd-item {
+  position: relative;
+}
+.psd-col .mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: .7;
+}
+.psd-col .desc {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translate(-50%,50%);
+  color: #fff;
+  text-align: center;
+  transition: all .35s;
+  opacity: 0;
+}
+.desc a:hover {
+  text-decoration: underline;
+}
+
+.bar {
+  position: absolute;
+  content: "";
+  bottom: 50%;
+  width: 2em;
+  height: 2px;
+  background-color: #fff;
+  transition: all .35s ease;
+  opacity: 0;
+}
+.bar-left {
+  left: 5em;
+}
+.bar-right {
+  right: 5em;
+}
+.desc h6 {
+  font-size: 20px;
+}
+.desc p {
+  font-size: 12px;
+}
+.psd-md .psd-item {
+  height: 196px;
 }
 .greetings {
   font-size: 24px;
@@ -185,8 +237,29 @@ a.underline {
   color: #138185;
 }
 
-.desc dd {
-  line-height: 1.5;
+/* explanation 针对IFE是什么的说明 */
+.expl { 
+  position: relative;
+  padding: 20px 0 0 ;
+}
+.help::before {
+  position: absolute;
+  content: "?";
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  border-radius: 50%;
+  left: -2.5em;
+  top: 1em;
+  background-color: #138185;
+  color: #fff;
+  cursor: help;
+}
+
+a.active {
+  color: #138185;
+  text-decoration: underline;
 }
 /* Hard Icon*/
 .hard::after {
@@ -199,14 +272,4 @@ a.underline {
   font-size: 12px;
   background-color: red;
   color: #fff;
-}
-.right h3 {
-  font-size: 20px;
-}
-.work li:hover a {
-  color: #138185;
-}
-.work li a {
-  line-height:1.5;
-  transition: all .3s ease;
 }
