@@ -12,9 +12,7 @@ body {
   font-size: 14px;
   font-family: "Helvetica Neue",Helvetica,STHeiTi,"Microsoft YaHei",sans-serif;
 }
-/* index */
 /* common */
-
 header {
   position: fixed;
   top: 0;
@@ -108,6 +106,17 @@ aside.profile {
 .contact ul li {
   padding-left: 50px;
   line-height: 1.5;
+  cursor: pointer;
+  color: #138185;
+}
+.contact ul li a {
+  color: #138185;
+}
+.contact ul li:hover {
+  text-decoration: underline;
+}
+.contact i {
+  padding-right: 4px;
 }
 .main {
   float: right;
@@ -120,11 +129,21 @@ aside.profile {
   margin-bottom: 20px;
 }
 .heading h4 {
+  position: relative;
   display: inline-block;
   font-size: 1.4em;
   color: #138185;
   cursor: default;
 }
+.heading h4::before {
+  position: absolute;
+  left: -.9em;
+  content: "";
+  height: 100%;
+  width: .5em;
+  background-color: #138185;
+}
+
 
 /* works */
 .works {
@@ -190,6 +209,9 @@ aside.profile {
   transition: all .35s;
   opacity: 0;
 }
+.psd-col:last-child {
+  padding-left: 2%;
+}
 .desc a:hover {
   text-decoration: underline;
 }
@@ -216,7 +238,7 @@ aside.profile {
 .desc p {
   font-size: 12px;
 }
-.psd-md .psd-item {
+.psd-item {
   height: 196px;
 }
 .greetings {
@@ -240,7 +262,8 @@ a.underline {
 /* explanation 针对IFE是什么的说明 */
 .expl { 
   position: relative;
-  padding: 20px 0 0 ;
+  padding: 20px 0 0;
+  cursor: default;
 }
 .help::before {
   position: absolute;
@@ -257,7 +280,7 @@ a.underline {
   cursor: help;
 }
 
-a.active {
+.expl:hover a {
   color: #138185;
   text-decoration: underline;
 }
@@ -272,4 +295,14 @@ a.active {
   font-size: 12px;
   background-color: red;
   color: #fff;
+}
+
+/* backTop */
+ .backTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: url(images/scrollup.png) no-repeat;
 }

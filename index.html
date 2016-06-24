@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hello World</title>
+  <title>Nice Meeting You</title>
   <link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="index.css">
@@ -28,9 +28,9 @@
       </div>
       <div class="contact">
         <ul>
-          <li>15901602446</li>
-          <li>644675503@qq.com</li>
-          <li>新浪微博</li>
+          <li><i class="fa fa-phone"></i>159-0160-2446</li>
+          <li><i class="fa fa-envelope"></i>644675503@qq.com</li>
+          <li><a href="https://github.com/shinfoxy"><i class="fa fa-github"></i>Github</a></li>
         </ul>
       </div>
     </aside>
@@ -44,7 +44,7 @@
             <h4>从PSD到静态页面</h4>
           </div>
           <div class="psd">
-            <div class="psd-col psd-md">
+            <div class="psd-col">
               <div>
                 <h5>静态WEB单页（一）</h5>
                 <a href="ifet7/ifet7.html">
@@ -72,17 +72,19 @@
                 </a>
               </div>
             </div>
-            <div class="psd-col psd-md">
+            <div class="psd-col">
               <div>
                 <h5>移动端页面</h5>
-                <div class="psd-item" style="background:url(images/thumb_2.png) no-repeat;background-size:cover;">
-                  <div class="mask" style="display:none;"></div>
-                  <div class="desc">
-                    <h6>IFE任务9</h6>
+                <a href="ifet9/ifet9.html">
+                  <div class="psd-item" style="background:url(images/thumb_2.png) no-repeat;background-size:cover;">
+                    <div class="mask" style="display:none;"></div>
+                    <div class="desc">
+                      <h6>IFE任务9</h6>
+                    </div>
+                    <div class="bar bar-left"></div>
+                    <div class="bar bar-right"></div>
                   </div>
-                  <div class="bar bar-left"></div>
-                  <div class="bar bar-right"></div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -123,7 +125,7 @@
             <h4>jQuery</h4>
           </div>
           <ul class="works">
-            <li><a href="jsdemo/jsdemo.html">Placeholder</a></li>
+            <li><a href="jsdemo/jsdemo.html">本页面的一些效果</a></li>
           </ul>
       </section>
       <section class="section">
@@ -134,13 +136,13 @@
             <li><a href="jsdemo/jsdemo.html">Placeholder</a></li>
           </ul>
       </section>
-      
     </div>
   </section>
+  <div class="backTop" style="display:none;"></div>
 </body>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
-// @workaround 这个hover有animation的bug
+    // @workaround 这个hoveryou快速移入移除残留的bug
     $('.psd-item').hover(function(){
       $(this).find('.mask').filter(':not(:animated)').fadeIn(350);
       $(this).find('.bar-left').css({'left':'8em','opacity':'1'});
@@ -154,10 +156,22 @@
       $(this).find('.desc')
       .css({'bottom':'40%','opacity':'0'});
     });
-    $('.help').hover(function(){
-      $(this).find('a').addClass('active');
-    }, function(){
-      $(this).find('a').removeClass('active');
+
+    // explanation 针对IFE是什么的说明 
+
+    // 回到顶部
+    var backTop = $('.backTop');
+    backTop.on('click',function(){
+      $('html, body').animate({
+        scrollTop:0
+      },800)
     })
+    $(window).on('scroll',function(){
+    if ($(window).scrollTop() > $('header').height()) {
+      backTop.fadeIn();
+    } else {
+      backTop.fadeOut();
+    }
+  })
 </script>
 </html>
