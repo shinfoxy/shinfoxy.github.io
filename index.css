@@ -121,7 +121,8 @@ aside.profile {
 .main {
   float: right;
   padding-top: 40px;
-  width: 76%;
+  padding-left: 6%;
+  width: 82%;
   min-width: 800px;
   box-sizing: border-box;
 }

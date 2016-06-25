@@ -166,7 +166,8 @@ body {
 .module-l, 
 .module-r {
   display: inline-block;
-  font-size:1.4rem;
+  vertical-align: top;
+  font-size: 1.4rem;
 }
 .module-l {
   width: 26.5%;
@@ -219,7 +220,7 @@ body {
   font-size: 2rem;
 }
 aside.comment {
-  margin-top: 2rem;
+  
   color: #ddd;
 }
 .article-r span {
