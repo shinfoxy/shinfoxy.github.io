@@ -41,18 +41,14 @@ header h2 {
 section.container {
   width: 1080px;
   margin: 41px auto;
-  /*padding: 2em 0 0 0;*/
   overflow: hidden;
 }
 
 aside.profile {
-  position: fixed;
   float: left;
-  width: 18%;
-  min-width: 220px;
+  width: 20%;
   height: 100vh;
   padding-top: 40px;
-  border-right: 1px solid #ddd;
   box-sizing: border-box;
   background-color: #fff;
 }
@@ -121,10 +117,10 @@ aside.profile {
 .main {
   float: right;
   padding-top: 40px;
-  padding-left: 6%;
-  width: 76%;
-  min-width: 800px;
+  padding-left: 3em;
+  width: 80%;
   box-sizing: border-box;
+  border-left: 1px solid #ddd;
 }
 .heading {
   margin-bottom: 20px;
