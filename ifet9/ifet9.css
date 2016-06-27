@@ -174,12 +174,12 @@ body {
 }
 .module-l img {
   width: 100%;
-  vertical-align: -1.6rem;
+  /*vertical-align: -1.6rem;*/
   box-sizing: border-box;
   border: 1px solid #FF7F00;
 }
 .article-wrap,
-.module-wrap:nth-child(2) {
+.module-wrap {
   padding-top: 1rem;
 }
 .article-wrap {
@@ -193,7 +193,7 @@ body {
 .module-r li {
   display: inline-block;
   font-size: 1.4rem;
-  line-height: 2.8;
+  line-height: 40px;
   text-align: center;
   width: 50%;
 }
@@ -244,12 +244,12 @@ aside.comment {
   line-height: 2.8;
   width: 33%;  
   text-align: center;
-  height: 8rem;
-  background: url(images/demo2.jpg) no-repeat;
-  background-size: cover;
 }
 .article-col-img li:last-child {
   margin-right: 0;
+}
+.article-col-img li img {
+  width: 100%;
 }
 /* img-tpl */
 .img-tpl {
