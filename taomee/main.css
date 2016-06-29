@@ -27,7 +27,6 @@ ul,ol {
 body {
   width: 100%;
   background: url(images/body.jpg) center bottom no-repeat;
-  /*overflow-x: hidden;*/
 }
 /* g-header */
 .g-header {
@@ -81,7 +80,6 @@ body {
 /* g-footer */
 .g-footer {
   width: 90%;
-  min-width: 1124px;
   margin: 0 auto;
   margin-top: 8rem;
 }
@@ -256,7 +254,7 @@ body {
 .trend ul {
   width: 100%;
 }
-.trend li {
+/*.trend li {
  float: left;
  box-sizing: border-box;
  text-align: center;
@@ -267,11 +265,12 @@ body {
 }
 .trend li img {
   width: 100%;
-}
+}*/
 
 .trend h5,
 .trend h6 {
   margin: 0;
+  font-weight: 400;
 }
 .trend h5 {
   font-size: 1.6rem;
@@ -387,3 +386,43 @@ body {
   background-color: #f43ea5;
   border-color: #f591db;
 }
+
+/*
+@media only screen and (min-width: :1124px) {
+  .trend ul {
+  width: 100%;
+  }
+  .trend li {
+   float: left;
+   box-sizing: border-box;
+   text-align: center;
+   width: 23.5%;
+  }
+  .trend li + li {
+    margin-left: 2%;
+  }
+  .trend li img {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 888px) and (max-width: 1123px) {
+  .game-item {
+    width: 100%;
+  }
+  .g-footer-legal {
+    float: none;
+    margin: 0 auto;
+  }
+  .trend li {
+    width: 48%;
+  }
+  .trend li:nth-of-type(even) {
+    margin-left: 4%;
+  }
+  .g-footer-legal .gongshang {
+    top: 9.5rem;
+  }
+}
+@media only screen and (max-width: 887px) {
+
+}*/
