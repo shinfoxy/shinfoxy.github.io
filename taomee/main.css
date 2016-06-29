@@ -32,6 +32,7 @@ body {
 /* g-header */
 .g-header {
   width: 80%;
+  max-width: 100rem;
   margin: 0 auto;
   padding: 2rem 0;
 }
@@ -162,6 +163,7 @@ body {
 .wrap {
   width: 90%;
   margin: 0 auto;
+  max-width: 109rem;
 }
 /*  */
 .title {
