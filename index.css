@@ -81,7 +81,7 @@ aside.profile {
 .avatar .info ul li:first-child {
   border-right: 1px solid #ddd;
 }
-.avatar .status {
+.avatar .status a {
   display: inline-block;
   margin-top: 12px;
   padding: 6px 24px;
@@ -89,10 +89,9 @@ aside.profile {
   border: 1px solid #138185;
   background-color: #fff;
   color: #138185;
-  cursor: default;
   transition: all .3s ease;
 }
-.avatar .status:hover {
+.avatar .status:hover a {
   background-color: #138185;
   color: #fff;
 }
