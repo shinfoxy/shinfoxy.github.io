@@ -86,6 +86,19 @@
                   </div>
                 </a>
               </div>
+              <div>
+                <h5>Taomee</h5>
+                <a href="taomee/taomee.html">
+                  <div class="psd-item" style="background:url(taomee/images/taomee.jpg) center center no-repeat;background-size:contain;">
+                    <div class="mask" style="display:none;"></div>
+                    <div class="desc">
+                      <h6>淘米应聘</h6>
+                    </div>
+                    <div class="bar bar-left"></div>
+                    <div class="bar bar-right"></div>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
           <div class="expl help">
@@ -138,19 +151,31 @@
       </section>
     </div>
   </section>
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <em>本页声明:</em>此页为个人项目展示用，若有任何不恰当内容，请联系我@<a href="">shinfoxy</a>，我会及时与您取得联系，作修改或者删除。
+      </p>
+    </div>
+  </footer>
   <div class="backTop" style="display:none;"></div>
 </body>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
-    // @workaround 这个hoveryou快速移入移除残留的bug
+    /*
+    filter(':not(:animated)')
+    @workaround 这个hover有快速移入移除残留的bug
+      @fixed  我在下面加了两个stop()
+     */
+    
     $('.psd-item').hover(function(){
-      $(this).find('.mask').filter(':not(:animated)').fadeIn(350);
+      $(this).find('.mask').stop().fadeIn(350);
       $(this).find('.bar-left').css({'left':'7em','opacity':'1'});
       $(this).find('.bar-right').css({'right':'7em','opacity':'1'});
-      $(this).find('.desc').filter(':not(:animated)')
+      $(this).find('.desc')
       .css({'bottom':'50%','opacity':'1'});
     },function(){
-      $(this).find('.mask').fadeOut(350);
+      $(this).find('.mask').stop().fadeOut(350);
       $(this).find('.bar-left').css({'left':'5em','opacity':'0'});
       $(this).find('.bar-right').css({'right':'5em','opacity':'0'});
       $(this).find('.desc')

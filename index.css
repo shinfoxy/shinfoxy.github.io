@@ -293,7 +293,21 @@ a.underline {
   background-color: red;
   color: #fff;
 }
-
+/* footer */
+.footer .container {
+  background-color: #ddd;
+  padding: 1rem 0;
+}
+.footer .container p {
+  text-align: center;
+  line-height: 2;
+}
+.footer .container p em {
+  font-weight: 700;
+}
+.footer .container p a:hover {
+  border-bottom: 1px solid #222;
+}
 /* backTop */
  .backTop {
   position: fixed;

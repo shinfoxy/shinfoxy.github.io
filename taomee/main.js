@@ -1,37 +1,27 @@
 $(document).ready(function(){
-  $('.movie a,.comic a').hover(function(){
-    var index = $(this).index;
-    $(this).addClass('on');
-    $(this).parent().siblings('.movie-content').children('.movie-item').eq(index).show().siblings().hide();
+  $('.movie li,.comic li').hover(function(){
+    $(this).addClass('on').siblings().removeClass('on');
+    $(this).parent().siblings('.movie-content,.comic-content').children('.movie-item,.comic-item').eq($(this).index()).show().siblings().hide();
+  });
+
+  var len = $('.main-i').length;
+  var count = 0;
+  function play() {
+    if (count < len - 1) {
+      count++;
+    } else {
+      count = 0;
+    }
+    $('.main-i').eq(count).show().siblings().hide();
+    $('.ctrl-i').eq(count).children('div').removeClass('mask').parent().siblings().children('div').addClass('mask');
+  }
+  $('.ctrl-i').hover(function(){
+    count = $(this).index() - 1;
+    play();
+  })
+  $('.slider').hover(function(){
+    clearInterval(auto);
   },function(){
-    $(this).removeClass('on');
+    auto = setInterval(play,3000);
   })
 })
-
-// window.onload = function(){
-//   var movie = document.getElementsByClassName('movie')[0];
-//   var oa = movie.getElementsByTagName('a');
-//   var oCon = movie.getElementsByClassName('movie-content')[0];
-//   oalen = oa.length;
-//   for(var i = 0; i < oalen ; i++) {
-//     oa[i].index = i;
-//     oa[i].onmouseover = function(){
-//       show(this.index);
-//     }
-//   }
-//   function addClass(obj, clsName) {
-//     var obj_class = obj.className;
-//     var blank = (obj_class != '') ? " ": "";
-//     var new_class = obj + blank + clsName;
-//     obj.className = new_class;
-//   }
-//   function show(a) {
-//     index = a;
-//     for(var j = 0; j < oalen; j++) {
-//       // oa[index].addClass(this,'on');
-//       // oa[j].className = "";
-//       // oCon[j].className = "";
-//     }
-//   }
-// }
-// // .addClass(this,'on')
