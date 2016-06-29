@@ -1,0 +1,338 @@
+/* taomee */
+
+html {
+  font-size: 62.5%;
+  font-family: "Microsoft Yahei";
+}
+a {
+  text-decoration: none;
+}
+ul,ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.clearfix::before,
+.clearfix::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+.clear {
+  display: table;
+  content: "";
+  clear: both;
+}
+/* global */
+body {
+  background: url(images/body.jpg) center bottom no-repeat;
+
+}
+/* g-header */
+.g-header {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.g-header-logo {
+  float: left;
+  display: block;
+  margin-right: 2rem;
+  width: 17.3rem;
+  height: 6.3rem;
+  background: url(images/skin.png) no-repeat;
+  background-position: -153px 0;
+}
+.g-nav {
+  float: left;
+}
+.g-nav li {
+  float: left;
+  font-size: 1.6rem;
+  line-height: 6.3rem;
+}
+.g-nav li a {
+  display: block;
+  padding: 0 2rem;
+}
+.g-reg {
+  float: right;
+}
+.g-reg-wrap {
+  margin-top: 1.95rem;
+  padding: .5rem 1rem;
+  border:1px solid #dcdcdc;
+  border-radius: 14px;
+  background-color: #ededed;
+} 
+.g-reg li {
+  float: left;
+  font-size: 1.4rem;
+
+}
+.g-reg li a {
+  display: block;
+  padding: 0 .5rem;
+  color: #999;
+}
+
+/* g-footer */
+.g-footer {
+  width: 90%;
+  min-width: 1124px;
+  margin: 0 auto;
+  margin-top: 8rem;
+}
+.g-footer-logo {
+  float: left;
+  margin-top: 2rem;
+  background: url(images/foot_public.png) no-repeat;
+  background-position: 0px -188px;
+  width: 15.5rem;
+  height: 2.6rem;
+}
+.g-footer-links {
+  float: left;
+  margin: 0 1%;
+  font-size: 0;
+}
+.g-footer-links a,
+.g-footer-links span {
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  color: #222;
+}
+.g-footer-links a {
+  padding-right: .5rem;
+}
+.g-footer-links a + a {
+  padding-left: .5rem;
+  border-left: 1px solid #222;
+}
+.g-footer-legal {
+  position: relative;
+  float: left;
+  margin-top: -.5rem;
+  width: 25rem;
+}
+.g-footer-legal-item:nth-of-type(even) {
+  margin-left: .5rem;
+}
+.g-footer-legal-item {
+  float: left;
+  margin-bottom: .5rem;
+  width: 12rem;
+  height: 4.6rem;
+  background: url(images/foot_public.png) no-repeat;
+}
+.g-footer-legal .gongshang {
+  position: absolute;
+  top: 2.5rem;
+  right: -4.5rem;
+  background-position: -121px 0;
+  width: 4.7rem;
+}
+.wangbei {
+  background-position: 0px -215px;
+}
+.wangjing {
+  background-position: 0px 0px;
+}
+.zhengxin {
+  background-position: 0 -94px;
+}
+.jubao {
+  background-position: 0 -141px;
+}
+.g-footer .signature {
+  width: 20%;
+  padding: 2rem 0 4rem;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+.signature a {
+  color: #aaa;
+}
+/*
+**********************
+* end global
+* ********************
+ */
+.wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+/*  */
+.title {
+  font-size: 3.6rem;
+
+}
+/* h2 icons */
+.title::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .5rem;
+  width: 5.1rem;
+  height: 4.7rem;
+  background: url(images/skin.png) no-repeat;
+}
+.trend h2::before {
+  background-position: 0 0;
+}
+.movie h2::before {
+  background-position: -51px 0;
+}
+.comic h2::before {
+  background-position: -102px 0;
+}
+.game h2::before {
+  background-position: -51px -47px;
+}
+.brand h2::before {
+  background-position: 0 -47px;
+}
+.toy h2::before {
+  background-position: -102px -47px;
+}
+
+
+/* banner */
+.banner {
+  width: 100%;
+  height: 55rem;
+  background-color: orange;
+}
+/* trend */
+.trend ul {
+  width: 100%;
+}
+.trend li {
+ float: left;
+ box-sizing: border-box;
+ text-align: center;
+ width: 23.5%;
+}
+.trend li + li {
+  margin-left: 2%;
+}
+.trend li img {
+  width: 100%;
+}
+
+.trend h5,
+.trend h6 {
+  margin: 0;
+}
+.trend h5 {
+  font-size: 1.6rem;
+  line-height: 2;
+  color: #222;
+}
+.trend h6 {
+  font-size: 1.4rem;
+  color: #888;
+}
+
+/* movie */
+.comic,
+.movie {
+  width: 100%;
+}
+.comic ul,
+.movie ul {
+  float: right;
+  margin-bottom: 1rem;
+}
+.comic li,
+.movie li {
+  float: left;
+}
+.comic li + li,
+.movie li + li {
+  margin-left: 1rem;
+}
+.comic li a,
+.movie li a {
+  display: block;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  border: 1px solid #aaa;
+  border-radius: 1rem;
+  color: #aaa;
+}
+.comic-content,
+.movie-content {
+  width: 100%;
+  height: 32.6rem;
+}
+.movie-content > div {
+  height: 100%;
+}
+/* game */
+
+.game-content {
+  padding-left: 4rem;
+}
+.game-item {
+  font-size: 0;
+  width: 80%;
+}
+.game-item h4 {
+  font-size: 2.4rem;
+}
+.game-item strong {
+  padding-right: 1rem;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+.game-item a {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding-left: 2%;
+  width: 15%;
+}
+.game-item a:first-of-type,
+.game-item a:nth-of-type(7n) {
+  padding-left: 0;
+}
+
+/* toy */
+
+.brand-item,
+.toy-item {
+  font-size: 0;
+  width: 96%;
+  margin: 0 auto;
+}
+.brand-item li,
+.toy-item li {
+  display: inline-block;
+  width: 48%;
+}
+.brand-item li + li,
+.toy-item li + li {
+  margin-left: 4%;
+}
+.brand-item img,
+.toy-item img {
+  width: 100%;
+}
+
+
+/* hover class */
+.seer.on {
+  color: #fff;
+  background-color: #006eb2;
+  border-color: #1eade0;
+}
+.mole.on {
+  color: #fff;
+  background-color: #f28100;
+  border-color: #f4b798;
+}
+.hua.on {
+  color: #fff;
+  background-color: #f43ea5;
+  border-color: #f591db;
+}
