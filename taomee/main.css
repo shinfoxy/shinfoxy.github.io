@@ -65,7 +65,12 @@ body {
   border:1px solid #dcdcdc;
   border-radius: 14px;
   background-color: #ededed;
+  text-align: center;
+
 } 
+.g-reg-wrap ul {
+  display: inline-block;
+}
 .g-reg li {
   float: left;
   font-size: 1.4rem;
@@ -413,6 +418,12 @@ body {
   .trend li {
     width: 48%;
   }
+  .trend li + li {
+    margin-left: 0;
+  }
+  .trend li {
+    margin-bottom: 2rem;
+  }
   .trend li:nth-of-type(even) {
     margin-left: 4%;
   }
@@ -420,6 +431,36 @@ body {
     top: 9.5rem;
   }
 }
-/*@media only screen and (max-width: 887px) {
-
-}*/
+@media only screen and (max-width: 887px) {
+  .g-header-logo {
+    float: none;
+  }
+  .g-nav {
+    float: none;
+  }
+  .g-reg {
+    float: none;
+  }
+  .game-item {
+    width: 100%;
+  }
+  .g-footer-legal {
+    float: none;
+    margin: 0 auto;
+  }
+  .trend li {
+    width: 48%;
+  }
+  .trend li + li {
+    margin-left: 0;
+  }
+  .trend li {
+    margin-bottom: 2rem;
+  }
+  .trend li:nth-of-type(even) {
+    margin-left: 4%;
+  }
+  .g-footer-legal .gongshang {
+    top: 9.5rem;
+  }
+}
