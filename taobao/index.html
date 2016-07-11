@@ -6,27 +6,79 @@
   <link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="main.css">
- 
 </head>
 <body>
   <header class="g-header">
     <div class="container">
       <div class="g-header-l">
         <ul>
-          <li><a class="hot" href="#">亲，请登录</a></li>
+          <li><a class="h" href="#">亲，请登录</a></li>
           <li><a href="#">免费注册</a></li>
           <li><a href="#">手机逛淘宝</a></li>
         </ul>
       </div>
       <div class="g-header-r">
         <ul>
-          <li><a href="#">我的淘宝</a></li>
-          <li><a href="#">购物车</a></li>
-          <li><a href="#">收藏夹</a></li>
+          <li class="nav-item">
+            <div>
+              <a href="#">我的淘宝<i class="fa fa-angle-down"></i></a>
+            </div>
+            <div class="nav-menu">
+              <div class="nav-menu-wrap">
+                <a href="#">已买到的宝贝</a>
+                <a href="#">我的足迹</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div>
+              <a href="#"><i class="fa fa-shopping-cart h"></i>购物车<i class="fa fa-angle-down"></i></a>
+            </div>
+            <div class="nav-menu">
+              <div class="nav-menu-wrap">
+                <p>您的购物车里还没有任何宝贝<a href="#">查看我的购物车</a></p>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div>
+              <a href="#"><i class="fa fa-star"></i>收藏夹<i class="fa fa-angle-down"></i></a>
+            </div>
+            <div class="nav-menu">
+              <div class="nav-menu-wrap">
+                <a href="#">收藏的宝贝</a>
+                <a href="#">收藏的店铺</a>
+              </div>
+            </div>
+          </li>
           <li><a href="#">商品分类</a></li>
-          <li><a href="#">卖家中心</a></li>
-          <li><a href="#">联系客服</a></li>
-          <li><a href="#">网站导航</a></li>
+          <li class="pipe">|</li>
+          <li class="nav-item">
+            <div>
+              <a href="#">卖家中心<i class="fa fa-angle-down"></i></a>
+            </div>
+            <div class="nav-menu">
+              <div class="nav-menu-wrap">
+                <a href="#">免费开店</a>
+                <a href="#">已卖出的宝贝</a>
+                <a href="#">出售中的宝贝</a>
+                <a href="#">卖家服务市场</a>
+                <a href="#">卖家培训中心</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div>
+              <a href="#">联系客服<i class="fa fa-angle-down"></i></a>
+            </div>
+            <div class="nav-menu">
+              <div class="nav-menu-wrap">
+                <a href="#">消费者客服</a>
+                <a href="#">卖家客服</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#"><i class="fa fa-bars h"></i>网站导航<i class="fa fa-angle-down"></i></a></li>
         </ul>
       </div>
     </div>
@@ -56,18 +108,20 @@
                 </div>
               </form>
               <div class="advanced-search">
-                <span>高级搜索</span>
+                <a href="#">高级搜索</a>
               </div>
             </div>
             <div class="search-ft">
               <ul>
-                <li><a class="hot" href="#">互联网SUV</a></li>
+                <li><a class="h" href="#">互联网SUV</a></li>
                 <li><a href="#">男女生牙膏</a></li>
-                <li><a href="#">男女生牙膏</a></li>
-                <li><a href="#">男女生牙膏</a></li>
-                <li><a href="#">男女生牙膏</a></li>
-                <li><a href="#">男女生牙膏</a></li>
-                <li><a href="#">男女生牙膏</a></li>
+                <li><a href="#">老板厨卫节</a></li>
+                <li><a class="h" href="#">男士T恤</a></li>
+                <li><a href="#">连衣裙</a></li>
+                <li><a href="#">女士凉鞋</a></li>
+                <li><a class="h" href="#">男士短裤</a></li>
+                <li><a href="#">行车记录仪</a></li>
+                <li><a href="#">沙发</a></li>
               </ul>
               <a href="#" class="more">更多 <i class="fa fa-angle-right"></i></a>
             </div> <!-- search-ft -->
@@ -267,13 +321,97 @@
           <div class="main-l">
             <!-- 轮播区 -->
             <div class="slider">
-              <div class="slider-1"></div>
-              <div class="slider-2"></div>
+              <div class="slider-1" id="slider-1">
+                <div class="prev"><i class="fa fa-angle-left"></i></div>
+                <div class="next"><i class="fa fa-angle-right"></i></div>
+                <div class="dot">
+                  <ul class="dotlist">
+                    <li class="cur"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+                <ul class="slider-1-list">
+                  <li><a href="#"><img src="images/TB1nB4VKVXXXXaDXpXXXXXXXXXX-520-280.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="images/TB1Sk0FKVXXXXcRXXXXXXXXXXXX-520-280.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="images/TB1_V8SKVXXXXa.apXXSutbFXXX.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="images/TB1WDnAJVXXXXXCXFXXSutbFXXX.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="images/TB1rI4sKVXXXXalXVXXSutbFXXX.jpg" alt=""></a></li>
+                </ul>
+              </div>
+              <div class="slider-2">
+                <div class="tmall">
+                  <div class="tmall-logo">
+                    <strong>天猫必逛</strong>
+                  </div>
+                  <p>热门品牌，天天上天猫！</p>
+                  <span class="slider-2-n"><i>4</i>/6</span>
+                </div>
+                <div class="prev"><i class="fa fa-angle-left"></i></div>
+                <div class="next"><i class="fa fa-angle-right"></i></div>
+                <div class="dot">
+                  <ul class="dotlist">
+                    <li class="cur"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+                <ul class="slider-2-list">
+                  <li class="tmall-item-type1">
+                    <a href="#"><img src="images/TB2UzDEpVXXXXXTXFXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB2llTvsXXXXXa6XXXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB2W5r6sXXXXXXkXXXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB2WuLgspXXXXaDXXXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB1UWboKXXXXXbDXXXXSutbFXXX.jpg_350x1000q90.jpg_.webp" alt=""></a>
+                  </li>
+                  <li class="tmall-item-type2">
+                    <a href="#"><img src="images/TB1Vi0jKVXXXXaEaXXXwu0bFXXX.png_350x350.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB1KG8BKVXXXXbFXVXXSutbFXXX.jpg_350x350.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB1JPhGKVXXXXbjXFXXSutbFXXX.jpg_350x350.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB1hpUNKFXXXXXvaXXXwu0bFXXX.png_350x350.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB1aFFSKVXXXXXoXpXXSutbFXXX.jpg_350x350.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB1AD0mKVXXXXaEXVXXSutbFXXX.jpg_350x350.jpg_.webp" alt=""></a>
+                  </li>
+                  <li class="tmall-item-type3">
+                    <a href="#"><img src="images/TB1RY2gLVXXXXcFXpXXSutbFXXX.jpg" alt=""></a>
+                    <a href="#"><img src="images/TB1ye31KFXXXXXrXFXXSutbFXXX.jpg" alt=""></a>
+                  </li>
+                  <li class="tmall-item-type1">
+                    <a href="#"><img src="images/TB2UzDEpVXXXXXTXFXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB2llTvsXXXXXa6XXXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB2W5r6sXXXXXXkXXXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB2WuLgspXXXXaDXXXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB1UWboKXXXXXbDXXXXSutbFXXX.jpg_350x1000q90.jpg_.webp" alt=""></a>
+                  </li>
+                  <li class="tmall-item-type2">
+                    <a href="#"><img src="images/TB1Vi0jKVXXXXaEaXXXwu0bFXXX.png_350x350.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB1KG8BKVXXXXbFXVXXSutbFXXX.jpg_350x350.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB1JPhGKVXXXXbjXFXXSutbFXXX.jpg_350x350.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB1hpUNKFXXXXXvaXXXwu0bFXXX.png_350x350.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB1aFFSKVXXXXXoXpXXSutbFXXX.jpg_350x350.jpg_.webp" alt=""></a>
+                    <a href="#"><img src="images/TB1AD0mKVXXXXaEXVXXSutbFXXX.jpg_350x350.jpg_.webp" alt=""></a>
+                  </li>
+                  <li class="tmall-item-type3">
+                    <a href="#"><img src="images/TB1RY2gLVXXXXcFXpXXSutbFXXX.jpg" alt=""></a>
+                    <a href="#"><img src="images/TB1ye31KFXXXXXrXFXXSutbFXXX.jpg" alt=""></a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <!-- 广告区 -->
             <div class="ads">
-              <div class="ads-1"></div>
-              <div class="ads-2"></div>
+              <div class="ads-1">
+                <img src="images/ad1.jpg">
+              </div>
+              <div class="ads-2">
+                <h5>今日热卖</h5>
+                <img src="images/ad2.jpg">
+              </div>
             </div>
 
           </div>
@@ -281,11 +419,11 @@
           <div class="main-r">
             <!-- avatar -->
             <div class="avatar">
-              <img src="images/defalut-avatar-210-210.png_80x80.jpg" alt="avatar">
+              <a href="#"><img src="images/defalut-avatar-210-210.png_80x80.jpg" alt="avatar"></a>
               <p>Hi！你好</p>
-              <p><a class="hot" href="#"><i class="fa fa-btc"></i>领淘金币抵钱</a> 或去 <a class="hot" href="#">会员俱乐部</a></p>
+              <p><a class="h" href="#"><i class="fa fa-btc"></i>领淘金币抵钱</a> 或去 <a class="h" href="#">会员俱乐部</a></p>
               <ul class="avatar-login clearfix">
-                <li><a href="#">登录</a></li>
+                <li class="avatar-login-first"><a href="#">登录</a></li>
                 <li><a href="#">注册</a></li>
                 <li><a href="#">开店</a></li>
               </ul>
@@ -293,24 +431,49 @@
             <!-- board -->
             <div class="board">
               <ul class="board-tab clearfix">
-                <li><a href="#">公告</a></li>
+                <li class="cur"><a href="#">公告</a></li>
                 <li><a href="#">规则</a></li>
                 <li><a href="#">论坛</a></li>
                 <li><a href="#">安全</a></li>
                 <li><a href="#">公益</a></li>
               </ul>
               <div class="board-content">
-                <ul class="clearfix">
+                <ul class="board-content-item">
+                  <li class="board-content-item-1"><a class="h" href="#">阿里上汽发布互联网汽车 开启万物互联网时代</a></li>
+                  <!-- <li><a class="h" href="#">开启万物互联网时代</a></li> -->
+                  <li><a href="#">阿里入选最聪明公司</a></li>
+                  <li><a href="#">上咸鱼寄售拍卖二手车</a></li>
+                </ul>
+                <ul class="board-content-item none">
                   <li><a href="#">淘宝争议处理规则变更</a></li>
                   <li><a href="#">微淘平台管理规范变更</a></li>
                   <li><a href="#">开店认证假货规则变更</a></li>
-                  <li><a href="#">恶意骚扰新增违规情形</a></li>
+                  <li><a href="#">恶意骚扰新增违规情形多一点子子子子子子</a></li>
                 </ul>
+                <ul class="board-content-item none">
+                  <li><a href="#">淘宝招募卖家志愿者</a></li>
+                  <li><a href="#">阿里推出兼职神器</a></li>
+                  <li><a href="#">700家热风淘宝路</a></li>
+                  <li><a href="#">是赚钱还是骗子</a></li>
+                </ul>
+                <ul class="board-content-item none">
+                  <li><a href="#">百万假卸妆水案破获</a></li>
+                  <li><a href="#">朋友圈卖假货被抓</a></li>
+                  <li><a href="#">电子证据成炒信“照妖镜”</a></li>
+                  <li><a href="#">警惕：加客服组团来袭</a></li>
+                </ul>
+                <ul class="board-content-item none">
+                  <li><a href="#">阿里捐赠700万元救灾</a></li>
+                  <li><a href="#">阿里与残联出助残政策</a></li>
+                  <li><a href="#">公益宝贝卖家发票索取</a></li>
+                  <li><a href="#">公益机构淘宝开店攻略</a></li>
+                </ul>
+
               </div>
             </div>
             <!-- service -->
             <div class="service">
-              <ul class="clearfix">
+              <ul class="servicelist clearfix">
                 <li><a href="#">
                   <span class="si si-tel"></span>
                   <p>充话费</p>
@@ -368,35 +531,35 @@
     <div class="section2">
       <div class="s2-main">
         <div class="recommend">
-          <a href="#" class="recommend-item">
-            <img src="images/TB1yyYmLXXXXXcSXVXXSutbFXXX.jpg_80x80.jpg" alt="二次元达人">
+          <a href="#" class="recommend-item recommend-item-1">
+            <img src="images/TB1yyYmLXXXXXcSXVXXSutbFXXX.jpg_80x80.jpg" alt="">
             <em>二次元达人</em>
             <p>萌即是正义</p>
             <strong><i class="fa fa-firefox"></i>人气19342</strong>
           </a>
-          <a href="#" class="recommend-item">
-            <img src="images/TB1yyYmLXXXXXcSXVXXSutbFXXX.jpg_80x80.jpg" alt="二次元达人">
-            <em>二次元达人</em>
-            <p>萌即是正义</p>
-            <strong><i class="fa fa-firefox"></i>人气19342</strong>
+          <a href="#" class="recommend-item recommend-item-2">
+            <img src="images/TB2bNOnfXXXXXa_XpXXXXXXXXXX_!!300066280.jpg_80x80.jpg" alt="">
+            <em>生活艺术家</em>
+            <p>过我要的生活</p>
+            <strong><i class="fa fa-firefox"></i>人气3342</strong>
           </a>
-          <a href="#" class="recommend-item">
-            <img src="images/TB1yyYmLXXXXXcSXVXXSutbFXXX.jpg_80x80.jpg" alt="二次元达人">
-            <em>二次元达人</em>
-            <p>萌即是正义</p>
-            <strong><i class="fa fa-firefox"></i>人气19342</strong>
+          <a href="#" class="recommend-item recommend-item-3">
+            <img src="images/TB2Cj3DqVXXXXcbXpXXXXXXXXXX_!!0-juitemmedia.jpg_80x80.jpg" alt="">
+            <em>蹦跑吧少年</em>
+            <p>为健康打卡</p>
+            <strong><i class="fa fa-firefox"></i>人气1442</strong>
           </a>
-          <a href="#" class="recommend-item">
-            <img src="images/TB1yyYmLXXXXXcSXVXXSutbFXXX.jpg_80x80.jpg" alt="二次元达人">
-            <em>二次元达人</em>
-            <p>萌即是正义</p>
-            <strong><i class="fa fa-firefox"></i>人气19342</strong>
+          <a href="#" class="recommend-item recommend-item-4">
+            <img src="images/TB1I9jIGVXXXXaGXFXXXXXXXXXX_80x80.jpg" alt="">
+            <em>理想家</em>
+            <p>想要这个家</p>
+            <strong><i class="fa fa-firefox"></i>人气25335</strong>
           </a>
-          <a href="#" class="recommend-item">
-            <img src="images/TB1yyYmLXXXXXcSXVXXSutbFXXX.jpg_80x80.jpg" alt="二次元达人">
-            <em>二次元达人</em>
-            <p>萌即是正义</p>
-            <strong><i class="fa fa-firefox"></i>人气19342</strong>
+          <a href="#" class="recommend-item recommend-item-5">
+            <img src="images/TB24ubonVXXXXc0XpXXXXXXXXXX_!!0-dgshop.jpg_80x80.jpg" alt="">
+            <em>就爱设计感</em>
+            <p>无设计不出街</p>
+            <strong><i class="fa fa-firefox"></i>人气5894</strong>
           </a>
         </div>
         <div class="favourite">
@@ -405,10 +568,135 @@
             <a href="#" class="more">更多 <i class="fa fa-angle-right"></i></a>
           </h2>
           <div class="m-favourite">
-            <div class="fav-item"></div>
-            <div class="fav-item"></div>
-            <div class="fav-item"></div>
-            <div class="fav-item"></div>
+            <div class="fav-item fav-item-1">
+              <div class="fav-item-side">
+                <a href="#"><img src="images/TB1exMrLVXXXXbGXXXXXXXXXXXX-200-200.png_150x150.jpg" alt=""></a>
+                <div class="fav-item-side-links">
+                  <strong>热门TOP</strong>
+                  <div class="fav-item-side-links-gp">
+                    <a class="h-tag" href="#">耐克</a>
+                    <a class="h-tag" href="#">阿迪达斯</a>
+                    <a href="#">运动套装</a>
+                    <a href="#">运动T恤</a>
+                    <a href="#">识货推荐店铺</a>
+                    <a href="#">篮球鞋</a>
+                    <a href="#">新百伦</a>
+                    <a href="#">AIR JORDAN</a>
+                    <a class="h-tag" href="#">亚瑟士</a>
+                    <a href="#">运动裤</a>
+                  </div>
+                </div>
+              </div>
+              <div class="fav-item-main">
+                <div class="fav-item-main-up">
+                  <a class="fav-pic-1" href="#"><img src="images/TB1fE8CKFXXXXbiXXXXXXXXXXXX-200-402.jpg_300x300.jpg" alt=""></a>
+                  <div class="fav-m-column-2">
+                    <a href="#" class="fav-pic-3"><img src="images/TB1Jp8kKFXXXXbHXVXXXXXXXXXX-100-100.jpg_80x80.jpg" alt="">
+                      <span>夏日垂钓必备</span>
+                    </a>
+                    <a href="#" class="fav-pic-3"><img src="images/TB1DYhwKFXXXXc9XpXXXXXXXXXX-100-100.jpg_80x80.jpg" alt="">
+                      <span>骑行必买装备</span>
+                    </a>
+                  </div>
+                  <a href="#" class="fav-pic-2"><img src="images/TB1T8f_KFXXXXbZXXXXXXXXXXXX-276-402.jpg_400x400.jpg" alt=""></a>
+                </div>
+                <div class="fav-item-main-down">
+                  <p class="fav-item-line">
+                    <a href="#"><img src="images/TB1CxNlMpXXXXa8XXXXXXXXXXXX-100-100.jpg_70x70.jpg" alt="">
+                      <span>运动文胸</span>
+                    </a>
+                    <a href="#"><img src="images/TB1JnEbLVXXXXXKapXXXXXXXXXX-100-100.jpg_70x70.jpg" alt="">
+                      <span>跑步鞋</span>
+                    </a>
+                    <a href="#"><img src="images/TB19lMELVXXXXa7XXXXXXXXXXXX-100-100.jpg_70x70.jpg" alt="">
+                      <span>篮球鞋</span>
+                    </a>
+                    <a href="#"><img src="images/TB1B3ZiLVXXXXX6aXXXXXXXXXXX-100-100.jpg_70x70.jpg" alt="">
+                      <span>健身服</span>
+                    </a>
+                  </p>
+                  <p class="fav-item-line">
+                    <a href="#"><img src="images/TB1CxNlMpXXXXa8XXXXXXXXXXXX-100-100.jpg_70x70.jpg" alt="">
+                      <span>运动文胸</span>
+                    </a>
+                    <a href="#"><img src="images/TB1JnEbLVXXXXXKapXXXXXXXXXX-100-100.jpg_70x70.jpg" alt="">
+                      <span>跑步鞋</span>
+                    </a>
+                    <a href="#"><img src="images/TB19lMELVXXXXa7XXXXXXXXXXXX-100-100.jpg_70x70.jpg" alt="">
+                      <span>篮球鞋</span>
+                    </a>
+                    <a href="#"><img src="images/TB1B3ZiLVXXXXX6aXXXXXXXXXXX-100-100.jpg_70x70.jpg" alt="">
+                      <span>健身服</span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+           <div class="fav-item fav-item-2">
+             <div class="fav-item-side">
+               <a href="#"><img src="images/TB1.VV.MpXXXXa1aXXXXXXXXXXX-200-200.jpg_150x150.jpg" alt=""></a>
+               <div class="fav-item-side-links">
+                 <strong>热门TOP</strong>
+                 <div class="fav-item-side-links-gp">
+                   <a class="h-tag" href="#">耐克</a>
+                   <a class="h-tag" href="#">阿迪达斯</a>
+                   <a href="#">运动套装</a>
+                   <a href="#">运动T恤</a>
+                   <a href="#">识货推荐店铺</a>
+                   <a href="#">篮球鞋</a>
+                   <a href="#">新百伦</a>
+                   <a href="#">AIR JORDAN</a>
+                   <a class="h-tag" href="#">亚瑟士</a>
+                   <a href="#">运动裤</a>
+                 </div>
+               </div>
+             </div>
+             <div class="fav-item-main">
+               
+             </div>
+           </div>
+           <div class="fav-item fav-item-3">
+             <div class="fav-item-side">
+               <a href="#"><img src="images/TB1yJjPLVXXXXbhXFXXXXXXXXXX-200-200.png_150x150.jpg" alt=""></a>
+               <div class="fav-item-side-links">
+                 <strong>热门TOP</strong>
+                 <div class="fav-item-side-links-gp">
+                   <a class="h-tag" href="#">耐克</a>
+                   <a class="h-tag" href="#">阿迪达斯</a>
+                   <a href="#">运动套装</a>
+                   <a href="#">运动T恤</a>
+                   <a href="#">识货推荐店铺</a>
+                   <a href="#">篮球鞋</a>
+                   <a href="#">新百伦</a>
+                   <a href="#">AIR JORDAN</a>
+                   <a class="h-tag" href="#">亚瑟士</a>
+                   <a href="#">运动裤</a>
+                 </div>
+               </div>
+             </div>
+             <div class="fav-item-main"></div>
+           </div>
+           <div class="fav-item fav-item-4">
+             <div class="fav-item-side">
+               <a href="#"><img src="images/TB1OxUBLVXXXXcGXFXXXXXXXXXX-200-200.png_150x150.jpg" alt=""></a>
+               <div class="fav-item-side-links">
+                 <strong>热门TOP</strong>
+                 <div class="fav-item-side-links-gp">
+                   <a class="h-tag" href="#">耐克</a>
+                   <a class="h-tag" href="#">阿迪达斯</a>
+                   <a href="#">运动套装</a>
+                   <a href="#">运动T恤</a>
+                   <a href="#">识货推荐店铺</a>
+                   <a href="#">篮球鞋</a>
+                   <a href="#">新百伦</a>
+                   <a href="#">AIR JORDAN</a>
+                   <a class="h-tag" href="#">亚瑟士</a>
+                   <a href="#">运动裤</a>
+                 </div>
+               </div>
+             </div>
+             <div class="fav-item-main"></div>
+           </div>
           </div>
         </div>
         <div class="web-ads"></div>
@@ -519,16 +807,16 @@
                 <strong>72 人说好</strong>
               </a></li>
               <li><a href="#">
-                <img src="images/TB28e7OcXXXXXbJXXXXXXXXXXXX_!!99326452-0-dgshop.jpg_120x120.jpg_.webp" alt="欧美纯色阔腿中裤">
-                <em>欧美纯色阔腿中裤</em>
-                <p>欧美纯色阔腿中裤，鲜艳的大红色，绝对吸引众人的眼球。还有字哦</p>
-                <strong>72 人说好</strong>
+                <img src="images/TB2pH3hpXXXXXbnXXXXXXXXXXXX_!!0-dgshop.jpg_120x120.jpg_.webp" alt="Adidas NMD 莫斯科">
+                <em>Adidas NMD 莫斯科</em>
+                <p>此款属于Adidas NMD系列，有圣保罗、莫斯科和藏蓝三种配色。</p>
+                <strong>1080 人说好</strong>
               </a></li>
               <li><a href="#">
-                <img src="images/TB2HU9PiXXXXXcvXXXXXXXXXXXX_!!875434864-0-dgshop.jpg_120x120.jpg_.webp" alt="欧美纯色阔腿中裤">
-                <em>欧美纯色阔腿中裤</em>
-                <p>欧美纯色阔腿中裤，鲜艳的大红色，绝对吸引众人的眼球。还有字哦</p>
-                <strong>72 人说好</strong>
+                <img src="images/TB1kR9PLVXXXXaCXpXXSutbFXXX.jpg_120x120.jpg_.webp" alt="欧美纯色阔腿中裤">
+                <em>无线蓝牙HiFi耳机</em>
+                <p>FIIL Wireless是汪峰携FIIL团队出品的艺术与科技的结晶，它酷炫无比的耳罩滑控，实现音乐通话滑动操控，为你赚足回头率；更值得一提的是它特有的FIIL+多功能APP，内设场景聆听、音质风格和一键煲机等功能，耳机行业的颠覆杰作，给你重塑听觉体验的震撼感</p>
+                <strong>432 人说好</strong>
               </a></li>
               <li><a href="#">
                 <img src="images/TB2zSWElFXXXXXPXpXXXXXXXXXX_!!0-dgshop.jpg_120x120.jpg_.webp" alt="欧美纯色阔腿中裤">
@@ -708,108 +996,148 @@
       <div class="guess">
         <div class="m-title">
           <h3 class="m-heading"><i class="fa fa-heart-o"></i> 猜你喜欢</h3>
-          <p class="desc">实时推荐最适合你的宝贝</p>
+          <p class="m-desc">实时推荐最适合你的宝贝</p>
         </div>
         <div class="guess-content">
           <ul class="guesslist">
             <li class="guess-item"><a href="#">
               <div class="guess-wrap">
                 <img src="images/TB2C4CeopXXXXbyXXXXXXXXXXXX_!!851960095.jpg_250x250.jpg" alt="#">
-                <p>布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具</p>
-                <p>
-                  <span class="guesslist-price"><em>¥</em>1994</span>  
-                  <span class="guesslist-sales">销量：116</span>
+                <p class="desc">布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具字符超出超出超出</p>
+                <p class="count">
+                  <span class="count-price"><em>¥</em>1994</span>  
+                  <span class="count-sales">销量：116</span>
                 </p>
+                <a href="#" class="similar none">
+                  <h4>找相似</h4>
+                  <p>发现更多相似的宝贝 <i class="fa fa-chevron-circle-right"></i></p>
+                </a>
               </div>
             </a></li>
             <li class="guess-item"><a href="#">
               <div class="guess-wrap">
                 <img src="images/TB2C4CeopXXXXbyXXXXXXXXXXXX_!!851960095.jpg_250x250.jpg" alt="#">
-                <p>布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具</p>
-                <p>
-                  <span class="guesslist-price"><em>¥</em>1994</span>  
-                  <span class="guesslist-sales">销量：116</span>
+                <p class="desc">布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具字符超出超出超出</p>
+                <p class="count">
+                  <span class="count-price"><em>¥</em>1994</span>  
+                  <span class="count-sales">销量：116</span>
                 </p>
+                <a href="#" class="similar none">
+                  <h4>找相似</h4>
+                  <p>发现更多相似的宝贝 <i class="fa fa-chevron-circle-right"></i></p>
+                </a>
               </div>
             </a></li>
             <li class="guess-item"><a href="#">
               <div class="guess-wrap">
                 <img src="images/TB2C4CeopXXXXbyXXXXXXXXXXXX_!!851960095.jpg_250x250.jpg" alt="#">
-                <p>布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具</p>
-                <p>
-                  <span class="guesslist-price"><em>¥</em>1994</span>  
-                  <span class="guesslist-sales">销量：116</span>
+                <p class="desc">布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具字符超出超出超出</p>
+                <p class="count">
+                  <span class="count-price"><em>¥</em>1994</span>  
+                  <span class="count-sales">销量：116</span>
                 </p>
+                <a href="#" class="similar none">
+                  <h4>找相似</h4>
+                  <p>发现更多相似的宝贝 <i class="fa fa-chevron-circle-right"></i></p>
+                </a>
               </div>
             </a></li>
             <li class="guess-item"><a href="#">
               <div class="guess-wrap">
                 <img src="images/TB2C4CeopXXXXbyXXXXXXXXXXXX_!!851960095.jpg_250x250.jpg" alt="#">
-                <p>布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具</p>
-                <p>
-                  <span class="guesslist-price"><em>¥</em>1994</span>  
-                  <span class="guesslist-sales">销量：116</span>
+                <p class="desc">布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具字符超出超出超出</p>
+                <p class="count">
+                  <span class="count-price"><em>¥</em>1994</span>  
+                  <span class="count-sales">销量：116</span>
                 </p>
+                <a href="#" class="similar none">
+                  <h4>找相似</h4>
+                  <p>发现更多相似的宝贝 <i class="fa fa-chevron-circle-right"></i></p>
+                </a>
               </div>
             </a></li>
             <li class="guess-item"><a href="#">
               <div class="guess-wrap">
                 <img src="images/TB2C4CeopXXXXbyXXXXXXXXXXXX_!!851960095.jpg_250x250.jpg" alt="#">
-                <p>布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具</p>
-                <p>
-                  <span class="guesslist-price"><em>¥</em>1994</span>  
-                  <span class="guesslist-sales">销量：116</span>
+                <p class="desc">布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具字符超出超出超出</p>
+                <p class="count">
+                  <span class="count-price"><em>¥</em>1994</span>  
+                  <span class="count-sales">销量：116</span>
                 </p>
+                <a href="#" class="similar none">
+                  <h4>找相似</h4>
+                  <p>发现更多相似的宝贝 <i class="fa fa-chevron-circle-right"></i></p>
+                </a>
               </div>
             </a></li>
             <li class="guess-item"><a href="#">
               <div class="guess-wrap">
                 <img src="images/TB2C4CeopXXXXbyXXXXXXXXXXXX_!!851960095.jpg_250x250.jpg" alt="#">
-                <p>布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具</p>
-                <p>
-                  <span class="guesslist-price"><em>¥</em>1994</span>  
-                  <span class="guesslist-sales">销量：116</span>
+                <p class="desc">布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具字符超出超出超出</p>
+                <p class="count">
+                  <span class="count-price"><em>¥</em>1994</span>  
+                  <span class="count-sales">销量：116</span>
                 </p>
+                <a href="#" class="similar none">
+                  <h4>找相似</h4>
+                  <p>发现更多相似的宝贝 <i class="fa fa-chevron-circle-right"></i></p>
+                </a>
               </div>
             </a></li>
             <li class="guess-item"><a href="#">
               <div class="guess-wrap">
                 <img src="images/TB2C4CeopXXXXbyXXXXXXXXXXXX_!!851960095.jpg_250x250.jpg" alt="#">
-                <p>布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具</p>
-                <p>
-                  <span class="guesslist-price"><em>¥</em>1994</span>  
-                  <span class="guesslist-sales">销量：116</span>
+                <p class="desc">布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具字符超出超出超出</p>
+                <p class="count">
+                  <span class="count-price"><em>¥</em>1994</span>  
+                  <span class="count-sales">销量：116</span>
                 </p>
+                <a href="#" class="similar none">
+                  <h4>找相似</h4>
+                  <p>发现更多相似的宝贝 <i class="fa fa-chevron-circle-right"></i></p>
+                </a>
               </div>
             </a></li>
             <li class="guess-item"><a href="#">
               <div class="guess-wrap">
                 <img src="images/TB2C4CeopXXXXbyXXXXXXXXXXXX_!!851960095.jpg_250x250.jpg" alt="#">
-                <p>布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具</p>
-                <p>
-                  <span class="guesslist-price"><em>¥</em>1994</span>  
-                  <span class="guesslist-sales">销量：116</span>
+                <p class="desc">布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具字符超出超出超出</p>
+                <p class="count">
+                  <span class="count-price"><em>¥</em>1994</span>  
+                  <span class="count-sales">销量：116</span>
                 </p>
+                <a href="#" class="similar none">
+                  <h4>找相似</h4>
+                  <p>发现更多相似的宝贝 <i class="fa fa-chevron-circle-right"></i></p>
+                </a>
               </div>
             </a></li>
             <li class="guess-item"><a href="#">
               <div class="guess-wrap">
                 <img src="images/TB2C4CeopXXXXbyXXXXXXXXXXXX_!!851960095.jpg_250x250.jpg" alt="#">
-                <p>布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具</p>
-                <p>
-                  <span class="guesslist-price"><em>¥</em>1994</span>  
-                  <span class="guesslist-sales">销量：116</span>
+                <p class="desc">布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具字符超出超出超出</p>
+                <p class="count">
+                  <span class="count-price"><em>¥</em>1994</span>  
+                  <span class="count-sales">销量：116</span>
                 </p>
+                <a href="#" class="similar none">
+                  <h4>找相似</h4>
+                  <p>发现更多相似的宝贝 <i class="fa fa-chevron-circle-right"></i></p>
+                </a>
               </div>
             </a></li>
             <li class="guess-item"><a href="#">
               <div class="guess-wrap">
                 <img src="images/TB2C4CeopXXXXbyXXXXXXXXXXXX_!!851960095.jpg_250x250.jpg" alt="#">
-                <p>布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具</p>
-                <p>
-                  <span class="guesslist-price"><em>¥</em>1994</span>  
-                  <span class="guesslist-sales">销量：116</span>
+                <p class="desc">布艺沙发组合 小户型沙发宜家布沙发可拆洗简约沙发北欧风格家具字符超出超出超出</p>
+                <p class="count">
+                  <span class="count-price"><em>¥</em>1994</span>  
+                  <span class="count-sales">销量：116</span>
                 </p>
+                <a href="#" class="similar none">
+                  <h4>找相似</h4>
+                  <p>发现更多相似的宝贝 <i class="fa fa-chevron-circle-right"></i></p>
+                </a>
               </div>
             </a></li>
           </ul>
@@ -822,9 +1150,10 @@
   </div>
   <div class="g-bottom">
     <div class="container">
+      <!-- helper -->
       <div class="helper">
         <div class="helper-item">
-          <h2>消费者保障</h2>
+          <h2><i class="fa fa-support"></i>消费者保障</h2>
           <ul>
             <li><a href="#">保障范围</a></li>
             <li><a href="#">退货退款流程</a></li>
@@ -833,35 +1162,37 @@
           </ul>
         </div>
         <div class="helper-item">
-          <h2>消费者保障</h2>
+          <h2><i class="fa fa-question-circle"></i>新手上路</h2>
           <ul>
-            <li><a href="#">保障范围</a></li>
-            <li><a href="#">退货退款流程</a></li>
-            <li><a href="#">服务中心</a></li>
-            <li><a href="#">更多特色服务</a></li>
+            <li><a href="#">新手专区</a></li>
+            <li><a href="#">消费警示</a></li>
+            <li><a href="#">交易安全</a></li>
+            <li><a href="#">24小时在线帮助</a></li>
+            <li><a href="#">免费开店</a></li>
           </ul>
         </div>
         <div class="helper-item">
-          <h2>消费者保障</h2>
+          <h2><i class="fa fa-credit-card"></i>付款方式</h2>
           <ul>
-            <li><a href="#">保障范围</a></li>
-            <li><a href="#">退货退款流程</a></li>
-            <li><a href="#">服务中心</a></li>
-            <li><a href="#">更多特色服务</a></li>
+            <li><a href="#">快捷支付</a></li>
+            <li><a href="#">信用</a></li>
+            <li><a href="#">余额宝</a></li>
+            <li><a href="#">蚂蚁花呗</a></li>
           </ul>
         </div>
         <div class="helper-item">
-          <h2>消费者保障</h2>
+          <h2><i class="fa fa-cube"></i>淘宝特色</h2>
           <ul>
-            <li><a href="#">保障范围</a></li>
-            <li><a href="#">退货退款流程</a></li>
-            <li><a href="#">服务中心</a></li>
-            <li><a href="#">更多特色服务</a></li>
+            <li><a href="#">手机淘宝</a></li>
+            <li><a href="#">旺信</a></li>
+            <li><a href="#">大众评审</a></li>
+            <li><a href="#">B格指南</a></li>
           </ul>
         </div>
       </div>
+      <!-- links -->
       <div class="links">
-        <ul>
+        <ul class="linkslist">
           <li><a href="#">阿里巴巴集团</a></li>
           <li><a href="#">淘宝网</a></li>
           <li><a href="#">天猫</a></li>
@@ -882,6 +1213,7 @@
           <li><a href="#">阿里巴巴集团</a></li>
         </ul>
       </div>
+      <!-- guide -->
       <div class="guide">
         <ul>
           <li><a href="#">关于淘宝</a></li>
@@ -894,13 +1226,26 @@
           <li><a href="#">开放平台</a></li>
         </ul>
         <span><em>&copy; 2003-2016 版权声明</em></span>
-        <ul>
+        <ul class="authlist">
           <li><em>网络文化经营许可证：</em><a href="#">许可证编号[2013]XXX-XXXX号</a></li>
           <li><em>增值电信业务经营许可证：</em><a href="#">浙B2-0000000</a></li>
+          <li><em>信息网络传播视听节目许可证：11093XXX号</em></li>
           <li><em>互联网违法和不良信息举报电话：0571-81683755 blxx@list.alibaba-inc.com</em></li>
         </ul>
       </div>
+      <div class="auth">
+        <a href="#" class="auth-item auth-item-1" target="_blank"></a>
+        <a href="#" class="auth-item auth-item-2" target="_blank"></a>
+        <a href="#" class="auth-item auth-item-3" target="_blank"></a>
+        <a href="#" class="auth-item auth-item-4" target="_blank"></a>
+        <a href="#" class="auth-item auth-item-5" target="_blank"></a>
+        <a href="#" class="auth-item auth-item-6" target="_blank"></a>
+        <a href="#" class="auth-item auth-item-7" target="_blank"></a>
+        <a href="#" class="auth-item auth-item-8" target="_blank"></a>
+        <a href="#" class="auth-item auth-item-9" target="_blank"></a>
+      </div>
     </div>
   </div>
+  <script src="js/main.js"></script>
 </body>
 </html>
