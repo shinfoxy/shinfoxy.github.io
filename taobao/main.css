@@ -670,6 +670,12 @@ body a:hover {
   float: left;
   margin-right: 10px;
   width: 60px;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+}
+.toutiao-item:hover img {
+  opacity: .8;
 }
 .toutiao-item em {
   font-style: normal;
@@ -700,20 +706,30 @@ body a:hover {
 .goodlist li {
   margin-bottom: 20px;
 }
-.goodlist img {
+.goodlist li:hover img {
+  opacity: .8;
+}
+.goodlist li img {
   float: left;
   margin-right: 10px;
   width: 100px;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
 }
 .goodlist em,
 .toutiao-item em  {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
 }
 .goodlist em {
   line-height: 32px;
 }
+
 .goodlist p,
 .toutiao-item p {
   height: 36px;
@@ -1079,7 +1095,7 @@ li.shopslist-item-last {
   margin-bottom: 0;
   position: relative;
   background: url(images/sprite1.png) no-repeat;
-  height: 33px;
+  height: 31px;
 }
 /* devider position */
 .is-favourite {
@@ -1237,7 +1253,9 @@ li.shopslist-item-last {
   float: left;
   overflow: hidden;
 }
-
+.fav-item-main a:hover img {
+  opacity: .8;
+}
 .fav-m-column-2 {
   float: left;
   width: 100px;
@@ -1294,10 +1312,16 @@ li.shopslist-item-last {
 .web-ads {
   width: 100%;
   height: 70px;
-  background-color: #F40;
+  background: url(images/TB14nX0KVXXXXbRaXXXSutbFXXX.jpg) no-repeat;
+  background-size: cover;
 }
 
 /* fashion */
+.fas-item-pic::before, .fas-item-pic::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .m-fashion {
 
 }
@@ -1305,32 +1329,210 @@ li.shopslist-item-last {
 .fas-item,
 .play-item {
   float: left;
-  width: 221px;
+  width: 219px;
   height: 258px;
-  background-color: #F40;
+  background: #fff;
+  border: 1px solid transparent;
 }
+.life-item:hover,
+.fas-item:hover,
+.play-item:hover {
+  border-color: #f40;
+}
+
 .fas-item + .fas-item,
 .life-item + .life-item,
 .play-item + .play-item {
-  border-left: 2px solid #f1f1f1;
+  margin-left: 2px;
+}
+
+.fas-item .fas-item-heading {
+  margin: 0;
+  padding: 6px 0;
+  text-align: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+.fas-item-heading {
+  position: relative;
+
+}
+.fas-item-heading .fa {
+  margin-left: 6px;
+  color: #ccc;
+  font-size: 26px;
+  cursor: pointer;
+}
+.fas-item-heading span {
+  position: absolute;
+  opacity: 0;
+  top: 30px;
+  right: 0;
+  width: 66px;
+  height: 80px;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+
+}
+
+.fas-item .fas-item-heading span img {
+  width: 66px;
+  height: 66px;
+}
+.fas-item-heading span em {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+}
+.fas-item-heading .fa:hover {
+
+}
+.fas-item-heading::after {
+  position: absolute;
+  
+  width: 60px;
+  height: 60px;
+}
+.fas-item .fas-item-heading img {
+  height: 18px;
+}
+.fas-item-pic a {
+  display: inline-block;
+  float: left;
+}
+.fas-item-pic a:hover img {
+  opacity: .8;
+}
+.fas-item-pic-lg {
+  padding: 10px;
+  border-right: 1px solid #f1f1f1;
+}
+.fas-item-pic-sm {
+  position: relative;
+  padding: 10px 10px 10px 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.fas-item-pic img {
+  display: block;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+}
+.fas-item-pic-lg img {
+  width: 90px;
+}
+.fas-item-pic-sm img {
+  width: 90px;
+}
+
+.fas-item-pic-sm span {
+  position: absolute;
+  bottom: 10px;
+  left: 7px;
+  right: 10px;
+  text-align: center;
+  color: #000;
+  background-color: rgba(255,255,255,.7);
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+}
+.fas-item-pic-sm:hover span {
+  background-color: rgba(255,255,255,1);
+  color: #f40;
 }
 /* @LOF => layout flexible */
 .m-life + .m-life,
 .m-play + .m-play {
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .shihui-item {
   float: left;
-  width: 203px;
-  height: 137px;
+  width: 183px;
+  height: 117px;
+  padding: 10px;
+  border: 1px solid #f1f1f1;
   background-color: #fff;
 }
-.shihui-item-lg {
-  width: 278px;
+.shihui-item::before,.shihui-item::after {
+  content: "";
+  display: table;
+  clear: both;
 }
-.shihui-item + .shihui-item {
-  border-left: 1px solid #f1f1f1
+.shihui-item:hover {
+  border-color: #f40;
+}
+.shihui-item-lg {
+  width: 253px;
+}
+
+.shihui-item-heading h3 {
+  margin: 0;
+}
+.shihui-item-heading img {
+  height: 18px;
+}
+.shihui-item-heading .fa {
+  margin-left: 8px;
+  color: #ccc;
+  font-size: 26px;
+}
+.TQG {
+  position: relative;
+}
+.TQG-time {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 16px;
+  color: #dc3535;
+}
+.shihui-item-lg h4 {
+  margin: 6px 0;
+  font-weight: 400;
+  font-size: 12px;
+  max-width: 168px;
+}
+
+.shihui-price {
+  color: #dc3535;
+  font-size: 16px;
+}
+.shihui-item-content span {
+  display: block;
+
+}
+.shihui-sold {
+  color: #aaa;
+}
+.shihui-item-pic {
+  float: right;
+}
+.shihui-item-pic img {
+  width: 90px;
+}
+.shihui-slogan {
+  margin: 10px 0;
+  font-size: 14px;
+}
+.shihui-slogan h4 {
+  margin: 0;
+
+}
+.shihui-slogan em {
+  font-style: normal;
+}
+.shihui-pill {
+  display: inline-block;
+  padding: 2px 12px;
+  border-radius: 12px;
+  border: 1px solid #f40;
+  color: #f40;
 }
 .m-shihui + .m-shihui {
   margin-top: 1px;
@@ -1400,28 +1602,68 @@ li.shopslist-item-last {
 .salebox {
   /*border: 1px solid #f1f1f1;*/
 }
-
-.sale-item-lg {
+.sale-item {
   float: left;
-  width: 233px;
-  height: 400px;
-  background-color: #F40;
-  border-left: 1px solid #f1f1f1;
+  padding: 10px;
+
+}
+.sale-item:hover {
+  border-color: #f40;
+}
+.sale-btm {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+.sale-btm em {
+  font-style: normal;
+}
+.sale-item-lg {
+  position: relative;
+  width: 212px;
+  height: 382px;
+  border: 1px solid #f1f1f1;
 }
 .sale-item-sm {
-  float: left;
-  width: 161px;
-  height: 200px;
-  background-color: #F40;
-  border-left: 1px solid #f1f1f1;
-  /*border-right: 1px solid #f1f1f1;*/
+  width: 140.5px;
+  height: 180px;
+  border: 1px solid #f1f1f1;
+
 }
+.sale-item-sm .sale-price {
+  font-size: 12px;
+}
+.sale-item-lg img {
+  width: 214px;
+  height: 214px;
+}
+
+.sale-item-sm img {
+  width: 139px;
+  height: 139px;
+}
+
 .sale-itemlist li {
   float: left;
   width: 33.33333333%;
 
 }
+.sale-price, .sale-sales {
+  display: block;
+}
 
+.sale-price {
+  margin-top: 10px;
+  color: #f40;
+  font-weight: 700;
+  font-size: 14px;
+}
+.sale-sales {
+  color: #aaa;
+}
+.sale-desc {
+  margin-top: 10px;
+}
 .sale-item-md {
   padding: 10px;
   height: 156px;
