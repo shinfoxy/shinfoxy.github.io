@@ -65,7 +65,7 @@ window.onload = function(){
   var tabsLi  = tabs.getElementsByTagName("li");
   var tabsCon = document.getElementsByClassName("board-content")[0];
   var tabsConUl = tabsCon.getElementsByTagName("ul");
-  var i, timer, tabsLilen = tabsLi.length;
+  var i, timer2, tabsLilen = tabsLi.length;
   for(i = 0; i < tabsLilen ; i++) {
     tabsLi[i].index = i;
     tabsLi[i].onmouseover = function() {
@@ -74,8 +74,8 @@ window.onload = function(){
   }
   function show(a) {
     index = a;
-    clearTimeout(timer);
-    timer = setTimeout(function(){
+    clearTimeout(timer2);
+    timer2 = setTimeout(function(){
       for(var j = 0; j < tabsLilen ; j++) {
           tabsLi[j].className = "";
           tabsConUl[j].style.display = "none";
@@ -113,7 +113,17 @@ function move(obj,att,add) {
 }
 
 
-  
+// window.onscroll = function() {
+//   var DISTANCE  = 130;
+//   var gTop      = document.getElementsByClassName("g-top")[0];
+//   var topSearch = document.getElementsByClassName("g-top-search")[0];
+//   var scrollH = document.body.scrollTop;
+//   if (scrollH > DISTANCE) {
+//     gTop.className = "g-top fixedwrap"
+//   } else {
+//     gTop.className = "g-top";
+//   }
+// }
 
 
   
