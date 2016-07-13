@@ -6,6 +6,66 @@
   <link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="main.css">
+  <script>
+    function Slider(obj,indexA,howmany) {
+      this.init(obj,indexA,howmany)
+    };
+    window.onload = function() {
+      // Tab
+      var tab = document.getElementsByClassName("board-tab")[0].getElementsByTagName("li");
+      var content = document.getElementsByClassName("board-content")[0].getElementsByTagName("ul");
+      var num = content.length;
+      // new Tab(tab,content,num);
+      // Slider
+      var slider1 = document.getElementsByClassName("slider-1-list")[0];
+      var dotlist1 = document.getElementsByClassName("dotlist")[0].getElementsByTagName("li");
+      var howmany1 = dotlist1.length;
+
+      var slider2 = document.getElementsByClassName("slider-2-list")[0];
+      var dotlist2 = document.getElementsByClassName("dotlist")[1].getElementsByTagName("li");
+      var howmany2 = dotlist2.length;
+      new Slider(slider1,dotlist1,howmany1);
+      new Slider(slider2,dotlist2,howmany2);
+
+
+      // close
+      var mobileBox = document.getElementsByClassName("mobile-box")[0];
+      var closeBtn = mobileBox.getElementsByClassName("fa-close")[0];
+      closeBtn.onclick = function(){
+        mobileBox.style.visibility = "hidden";
+      }
+
+      // tab
+      var tabs = document.getElementsByClassName("board-tab")[0];
+          var tabsLi  = tabs.getElementsByTagName("li");
+          var tabsCon = document.getElementsByClassName("board-content")[0];
+          var tabsConUl = tabsCon.getElementsByTagName("ul");
+          var i, timer2, tabsLilen = tabsLi.length;
+          for(i = 0; i < tabsLilen ; i++) {
+            tabsLi[i].index = i;
+            tabsLi[i].onmouseover = function() {
+              show(this.index);
+            }
+          }
+          function show(a) {
+            index = a;
+            clearTimeout(timer2);
+            timer2 = setTimeout(function(){
+              for(var j = 0; j < tabsLilen ; j++) {
+                  tabsLi[j].className = "";
+                  tabsConUl[j].style.display = "none";
+                  tabsLi[index].className = "cur";
+                  tabsConUl[index].style.display = "block";
+              }
+            } ,300)
+          }
+        
+    }
+  </script>
+  <script src="js/slider.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+
+
 </head>
 <body>
   <header class="g-header">
@@ -721,11 +781,13 @@
                   </ul>
                 </div>
                 <ul class="slider-1-list">
+                  <li><a href="#"><img src="images/TB1rI4sKVXXXXalXVXXSutbFXXX.jpg" alt=""></a></li>
                   <li><a href="#"><img src="images/TB1nB4VKVXXXXaDXpXXXXXXXXXX-520-280.jpg" alt=""></a></li>
                   <li><a href="#"><img src="images/TB1Sk0FKVXXXXcRXXXXXXXXXXXX-520-280.jpg" alt=""></a></li>
                   <li><a href="#"><img src="images/TB1_V8SKVXXXXa.apXXSutbFXXX.jpg" alt=""></a></li>
                   <li><a href="#"><img src="images/TB1WDnAJVXXXXXCXFXXSutbFXXX.jpg" alt=""></a></li>
                   <li><a href="#"><img src="images/TB1rI4sKVXXXXalXVXXSutbFXXX.jpg" alt=""></a></li>
+                  <li><a href="#"><img src="images/TB1nB4VKVXXXXaDXpXXXXXXXXXX-520-280.jpg" alt=""></a></li>
                 </ul>
               </div>
               <div class="slider-2">
@@ -756,6 +818,13 @@
                     <a href="#"><img src="images/TB2W5r6sXXXXXXkXXXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg" alt=""></a>
                     <a href="#"><img src="images/TB24hO0spXXXXc1XXXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg" alt=""></a>
                   </li>
+                  <li class="tmall-item-type1">
+                    <a href="#"><img src="images/TB2UzDEpVXXXXXTXFXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg" alt=""></a>
+                    <a href="#"><img src="images/TB2bbYtsXXXXXbrXXXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg" alt=""></a>
+                    <a href="#"><img src="images/TB1UWboKXXXXXbDXXXXSutbFXXX.jpg_350x1000q90.jpg" alt=""></a>
+                    <a href="#"><img src="images/TB2W5r6sXXXXXXkXXXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg" alt=""></a>
+                    <a href="#"><img src="images/TB24hO0spXXXXc1XXXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg" alt=""></a>
+                  </li>
                   <li class="tmall-item-type2">
                     <a href="#"><img src="images/TB1AD0mKVXXXXaEXVXXSutbFXXX.jpg_350x350.jpg" alt=""></a>
                     <a href="#"><img src="images/TB1JPhGKVXXXXbjXFXXSutbFXXX.jpg_350x350.jpg" alt=""></a>
@@ -786,6 +855,13 @@
                   <li class="tmall-item-type3">
                     <a href="#"><img src="images/TB1RY2gLVXXXXcFXpXXSutbFXXX.jpg" alt=""></a>
                     <a href="#"><img src="images/TB1ye31KFXXXXXrXFXXSutbFXXX.jpg" alt=""></a>
+                  </li>
+                  <li class="tmall-item-type1">
+                    <a href="#"><img src="images/TB2UzDEpVXXXXXTXFXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg" alt=""></a>
+                    <a href="#"><img src="images/TB2bbYtsXXXXXbrXXXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg" alt=""></a>
+                    <a href="#"><img src="images/TB1UWboKXXXXXbDXXXXSutbFXXX.jpg_350x1000q90.jpg" alt=""></a>
+                    <a href="#"><img src="images/TB2W5r6sXXXXXXkXXXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg" alt=""></a>
+                    <a href="#"><img src="images/TB24hO0spXXXXc1XXXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg" alt=""></a>
                   </li>
                 </ul>
               </div>
@@ -1222,7 +1298,7 @@
           </div>
         </div>
         <!-- 页面广告 -->
-        <div class="web-ads">
+        <div class="web-ads mt10">
           <div></div>
         </div>
         <!-- 时尚爆料王 -->
@@ -2305,6 +2381,5 @@
       </div>
     </div>
   </div>
-  <script src="js/main.js"></script>
 </body>
 </html>

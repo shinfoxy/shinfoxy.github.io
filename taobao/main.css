@@ -943,6 +943,7 @@ body a:hover {
   margin-top: 10px;
 }
 .goodlist li {
+  height: 100px;
   margin-bottom: 20px;
 }
 .goodlist li:hover img {
@@ -971,7 +972,8 @@ body a:hover {
 
 .goodlist p,
 .toutiao-item p {
-  height: 36px;
+  height: 40px;
+  line-height: 20px;
   overflow: hidden;
   color: #666;
 }
@@ -1042,7 +1044,8 @@ li.shopslist-item-last {
 }
 /* hot */
 .hot h3 {
-  margin: 14px 0 8px; 
+  margin-top: 14px;
+  margin-bottom: 0; 
   font-size: 14px;
 }
 .hot-item img {
@@ -1337,7 +1340,7 @@ li.shopslist-item-last {
   margin-top: -32px;
 }
 .devider {
-  margin-bottom: 0;
+  margin-bottom: 10px;
   position: relative;
   background: url(images/sprite1.png) no-repeat;
   height: 31px;
@@ -1693,7 +1696,7 @@ li.shopslist-item-last {
 /* @LOF => layout flexible */
 .m-life + .m-life,
 .m-play + .m-play {
-  margin-top: 6px;
+  margin-top: 12px;
 }
 
 .shihui-item {
