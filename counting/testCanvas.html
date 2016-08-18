@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <style type="text/css">
+    body {
+      background-color: #ddd;
+    }
+    .ring {
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+    .mask {
+      background-color: #eee;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;top:0;
+      z-index: 90;
+      border-radius: 50%;
+      transform: scale(.9);
+    }
+  </style>
+</head>
+<body>
+  <div class="ring">
+    
+  </div>
+  <!-- <canvas id="bg" width="300" height="300"></canvas> -->
+  <script type="text/javascript">
+  // 加入画布
+    var ring = document.getElementsByClassName('ring')[0];
+
+    var cns = document.createElement('canvas');
+    var ctx = cns.getContext('2d');
+    cns.width = ctx.width = 400;
+    cns.height = ctx.height = 400;
+    ring.appendChild(cns);
+
+    // var r = w / 2;
+    var r = 200;
+    // 底图
+    ctx.beginPath();
+    ctx.fillStyle = '#fff';
+    ctx.strokeStyle = '#fff';
+    ctx.lineWidth = 1;
+    ctx.arc(r,r,r,0,2 * Math.PI);
+    ctx.fill();
+    ctx.stroke();
+
+    var mask = document.createElement('div');
+    mask.className = 'mask';
+    ring.appendChild(mask);
+    // 盖住的小圆
+    // ctx.beginPath();
+    // ctx.fillStyle = '#ddd';
+    // ctx.strokeStyle = '#ddd';
+    // ctx.lineWidth = 1;
+    // ctx.arc(r,r,r*.9,0,2 * Math.PI);
+    // ctx.fill();
+    // ctx.stroke();
+
+    var sAngle = 1.5 * Math.PI;
+    var eAngle = 0;
+    var aAngle = 2 * Math.PI
+
+    var color = 'red';
+
+    eAngle = sAngle 
+
+    ctx.beginPath();
+    ctx.fillStyle = '#f00';
+    ctx.strokeStyle = '#f00';
+    ctx.lineWidth = 1;
+    ctx.moveTo(r,r)
+    ctx.arc(r,r,r,sAngle,eAngle);
+    ctx.fill();
+    ctx.stroke();
+
+    sAngle = eAngle;
+
+
+  </script>
+  <!-- <script>
+    var bg = document.getElementById('bg');
+    var ctx = bg.getContext('2d');
+    var circ = Math.PI * 2;
+    var quart = Math.PI / 2;
+    var imd = null;
+
+    ctx.beginPath();
+    ctx.strokeStyle = "#f00";
+    ctx.lineCap = "square";
+    ctx.closePath();
+    ctx.fill();
+    ctx.lineWidth = 10;
+
+    var timer = null;
+
+    imd = ctx.getImageData(0,0,240,240);
+    function draw(current) {
+      ctx.putImageData(imd,0,0);
+      ctx.beginPath();
+      ctx.arc(120,120,70,-quart,(circ*current)-quart,false);
+      ctx.stroke();
+    }
+    var t = 0;
+    var timer = null;
+    function load(now) {
+      timer = setInterval(function(){
+      if(t>now) {
+        clearInterval(timer);
+        } else {
+          draw(t);
+          t+=0.01
+        }
+      },20);
+    }
+    load();
+    // timer = null;
+  </script> -->
+</body>
+
+</html>

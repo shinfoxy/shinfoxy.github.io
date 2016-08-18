@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/normalize420.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>  
+<div class="container">
+  
+  <div class="ctrl-panel">
+
+    <div class="mainBox">
+      <div class="timeSetter">
+        <input id="hour" type="number"><span>小时</span>
+        <input id="minute" type="number"><span>分钟</span>
+        <span class="del" title="清空">清空</span>
+        <div class="tooltips">
+          <div class="tooltipsHour">请在0～23之间选择整数</div>
+          <div class="tooltipsMinute">请在1~59之间选择整数</div>
+        </div>
+      </div>
+      <div class="viewTime">
+        <span class="viewHour"></span><span class="colon J-colonHour">:</span>
+        <span class="viewMinute"></span><span class="colon J-colonMinute">:</span>
+        <span class="viewSecond"></span>
+      </div>
+      <div class="ring">
+       <div class="mask">
+         <input id="todo" type="text" placeholder="您要做什么">
+         <div id="toshow" class="toshow"></div>
+       </div>
+       <canvas id="drawCns"></canvas>
+      </div>
+    </div>
+
+
+    <div class="sideBox">
+      <div class="btnControl">
+        <button class="btn btn-start" type="button">开始计时</button>
+        <button class="btn btn-reset" type="button">重置</button>
+      </div>
+    </div>
+    
+  </div>
+
+
+</div>
+<script src="script/base.js"></script>
+<script src="script/main.js"></script>
+
+</body>
+</html>
