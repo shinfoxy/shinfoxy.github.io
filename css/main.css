@@ -13,6 +13,10 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
 }
 /* END RESET*/
+
+/* 2 Grid by Bootstrap*/
+
+
 body {
   background-color: #ddd;
   font-family: 'open sans','helvetica',arial,sans-serif;

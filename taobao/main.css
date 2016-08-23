@@ -1,5 +1,10 @@
 /* main.css */
+/* JS */
+.J_tab-content {
+  display: none;
+}
 /* global */
+
 .h {
   color: #F40;
 }

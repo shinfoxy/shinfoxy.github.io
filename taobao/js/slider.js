@@ -14,11 +14,14 @@ Slider.prototype = {
         },3000);
         this.obj.parentNode.onmouseover = function() {
           clearInterval(self.autoTimer);
+          return false;
         };
         this.obj.parentNode.onmouseout = function() {
           self.autoTimer = setInterval(function() {
             self.next();
           },3000)
+          return false;
+
         }
         this.left.onclick = function() {
           self.prev();
@@ -28,12 +31,11 @@ Slider.prototype = {
         };
         for( var i = 0; i < this.num ; i++) {
           this.indexA[i].index = i;
-          this.indexA[i].onclick = function() {
+          this.indexA[i].onmouseover = function() {
             self.index = this.index;
             self.move(this.index);
           }
         }
-
   },
 
   prev: function() {
@@ -74,6 +76,8 @@ Slider.prototype = {
         self.obj.style.left = self.obj.offsetLeft + iSpeed + "px";
       }
     },15);
+
+
   }
 }
 // Slider.prototype = {

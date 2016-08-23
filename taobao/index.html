@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>重构／淘宝网 － 淘！我喜欢</title>
-  <link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://cdn.bootcss.com/font-awesome/4.0.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="main.css">
   <script>
@@ -28,35 +28,21 @@
       var closeBtn = mobileBox.getElementsByClassName("fa-close")[0];
       closeBtn.onclick = function(){
         mobileBox.style.visibility = "hidden";
-      }
+      };
+      
+      var tabs = document.getElementsByClassName('J_tab');
+      new Tab({
+        root: tabs[0],
+        trigger: 'mouseover',
+        currentClass: 'cur'
+      })
 
-      // tab
-      var tabs = document.getElementsByClassName("board-tab")[0];
-          var tabsLi  = tabs.getElementsByTagName("li");
-          var tabsCon = document.getElementsByClassName("board-content")[0];
-          var tabsConUl = tabsCon.getElementsByTagName("ul");
-          var i, timer2, tabsLilen = tabsLi.length;
-          for(i = 0; i < tabsLilen ; i++) {
-            tabsLi[i].index = i;
-            tabsLi[i].onmouseover = function() {
-              show(this.index);
-            }
-          }
-          function show(a) {
-            index = a;
-            clearTimeout(timer2);
-            timer2 = setTimeout(function(){
-              for(var j = 0; j < tabsLilen ; j++) {
-                  tabsLi[j].className = "";
-                  tabsConUl[j].style.display = "none";
-                  tabsLi[index].className = "cur";
-                  tabsConUl[index].style.display = "block";
-              }
-            } ,300)
-          }     
+      // tab    
     }
   </script>
+  <script src=js/base.js></script>
   <script src="js/slider.js"></script>
+  <script src="js/tab.js"></script>
 </head>
 <body>
   <header class="g-header">
@@ -1475,40 +1461,40 @@
               </ul>
             </div>
             <!-- board -->
-            <div class="board">
+            <div class="J_tab board">
               <ul class="board-tab clearfix">
-                <li class="cur"><a href="#">公告</a></li>
-                <li><a href="#">规则</a></li>
-                <li><a href="#">论坛</a></li>
-                <li><a href="#">安全</a></li>
-                <li><a href="#">公益</a></li>
+                <li class="J_tab-menu"><a href="#">公告</a></li>
+                <li class="J_tab-menu"><a href="#">规则</a></li>
+                <li class="J_tab-menu"><a href="#">论坛</a></li>
+                <li class="J_tab-menu"><a href="#">安全</a></li>
+                <li class="J_tab-menu"><a href="#">公益</a></li>
               </ul>
               <div class="board-content">
-                <ul class="board-content-item">
+                <ul class="J_tab-content board-content-item">
                   <li class="board-content-item-1"><a class="h" href="#">阿里上汽发布互联网汽车 开启万物互联网时代</a></li>
                   <!-- <li><a class="h" href="#">开启万物互联网时代</a></li> -->
                   <li><a href="#">阿里入选最聪明公司</a></li>
                   <li><a href="#">上咸鱼寄售拍卖二手车</a></li>
                 </ul>
-                <ul class="board-content-item none">
+                <ul class="J_tab-content board-content-item">
                   <li><a href="#">淘宝争议处理规则变更</a></li>
                   <li><a href="#">微淘平台管理规范变更</a></li>
                   <li><a href="#">开店认证假货规则变更</a></li>
                   <li><a href="#">恶意骚扰新增违规情形多一点子子子子子子</a></li>
                 </ul>
-                <ul class="board-content-item none">
+                <ul class="J_tab-content board-content-item">
                   <li><a href="#">淘宝招募卖家志愿者</a></li>
                   <li><a href="#">阿里推出兼职神器</a></li>
                   <li><a href="#">700家热风淘宝路</a></li>
                   <li><a href="#">是赚钱还是骗子</a></li>
                 </ul>
-                <ul class="board-content-item none">
+                <ul class="J_tab-content board-content-item">
                   <li><a href="#">百万假卸妆水案破获</a></li>
                   <li><a href="#">朋友圈卖假货被抓</a></li>
                   <li><a href="#">电子证据成炒信“照妖镜”</a></li>
                   <li><a href="#">警惕：加客服组团来袭</a></li>
                 </ul>
-                <ul class="board-content-item none">
+                <ul class="J_tab-content board-content-item">
                   <li><a href="#">阿里捐赠700万元救灾</a></li>
                   <li><a href="#">阿里与残联出助残政策</a></li>
                   <li><a href="#">公益宝贝卖家发票索取</a></li>
