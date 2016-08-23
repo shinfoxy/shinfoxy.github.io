@@ -1,20 +1,15 @@
 .container {
-  width: 720px;
-  margin: 40px auto 0;
+  /*width: 100%;*/
+  margin: 0 auto ;
 }
 .mainBox {
-  float: left;
-  width: 78%;
-  height: 600px;
-  border: 1px solid #ddd;
+  padding-bottom: 20px;
   background-color: #eee;
 
 }
+
 .sideBox {
-  float: right;
-  width: 20%;
-  height: 600px;
-  border: 1px solid #ddd;
+  padding: 20px 0;
 }
 .btn {
   text-decoration: none;
@@ -50,7 +45,6 @@
 /* timeSetter */
 .timeSetter {
   position: relative;
-  text-align: center;
 }
 .timeSetter .del {
   position: absolute;
@@ -96,19 +90,25 @@
   line-height: 100px;
 }
 .btnControl {
-  text-align: center;
+  position: relative;
 }
 .btnControl button {
-  margin-top: 20px;
+  position: absolute;
+  top: 0;
 }
-
+.btnControl .btn-start {
+  left: 20%;
+}
+.btnControl .btn-reset {
+  right: 20%;
+}
 /* progress */
 .ring {
   position: relative;
-  width: 480px;
+  width: 90vw;
+  height: 90vw;
   margin: 0 auto;
-  /*border: 1px solid #ddd;*/
-  height: 480px;
+
 }
 
 .mask {
