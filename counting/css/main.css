@@ -1,5 +1,5 @@
 .container {
-  /*width: 100%;*/
+  max-width: 660px;
   margin: 0 auto ;
 }
 .mainBox {
@@ -49,7 +49,7 @@
 .timeSetter .del {
   position: absolute;
   opacity: 0;
-  top: 44px;right: 30px;
+  top: 4px;right: 30px;
   font-size: 14px;
   padding: 4px 8px;
   border-radius: 3px;
@@ -107,6 +107,8 @@
   position: relative;
   width: 90vw;
   height: 90vw;
+  max-width: 600px;
+  max-height: 600px;
   margin: 0 auto;
 
 }
