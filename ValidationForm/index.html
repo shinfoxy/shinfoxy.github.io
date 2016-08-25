@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>表单验证 | jQuery</title>
+  <link rel="stylesheet" href="css/normalize420.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="placeholder"></div>
+<div class="wrap">
+  <form action="" class="register">
+    <div class="register_box">
+      <label for="phone">手机号</label>
+      <input id="phone" type="text" maxlength="11" placeholder="请输入手机号" autocomplete="off">
+      <p></p>
+    </div>
+    <div class="register_box">
+      <label for="verfCode">验证码</label>
+      <input id="verfCode" type="text"  placeholder="验证码">
+      <a href="javascript:;">获取</a>
+      <p></p>
+    </div>
+    <div class="register_box">
+      <label for="email">邮箱</label>
+      <input id="email" type="email" placeholder="请输入邮箱" autocomplete="off">
+      <p></p>
+    </div>
+    <div class="register_box">
+      <label for="password">登录密码</label>
+      <input id="password" type="password"  placeholder="请输入6-20个字符">
+      <p></p>
+    </div>
+    <div class="register_box">
+      <label for="confirmPassword">确认密码</label>
+      <input id="confirmPassword" type="password"  placeholder="请再次输入密码">
+      <p></p>
+    </div>
+   
+    <div class="register_box">
+      <button class="btn" type="submit" id="doReg">立即注册</button>
+    </div>
+
+  </form>
+</div>
+<script src="script/vendor/jquery.js"></script>
+<script src="script/verify.js"></script>
+<!-- <script src="script/validation.js"></script> -->
+</body>
+</html>
