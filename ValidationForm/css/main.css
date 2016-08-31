@@ -11,7 +11,7 @@ p {
   margin: 0;
 }
 .wrap {
-
+  width: 100%;
   text-align: center;
 
 }
@@ -20,7 +20,7 @@ p {
   margin: 0 auto;
   padding: 40px 120px 20px;
   /*box-sizing: border-box;*/
-  border: 1px solid #aaa;
+  /*border: 1px solid #aaa;*/
   box-sizing: border-box;
 
 }

@@ -994,6 +994,9 @@ body {
   .ft1 p::after, .ft2 p::after, .ft3 p::after {
     display: none;
   }
-
+  .input-item-md {
+    margin: 0 !important;
+    margin-bottom: 20px !important;
+  }
 }
 }
