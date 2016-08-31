@@ -7,26 +7,26 @@ function verify(obj, type) {
     case 'phone' : reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
                    text.blank = '手机号不能为空';
                    text.error = '请输入正确手机号';
-                   text.success = '正确';
+                   text.success = '';
     break;
 
     case 'email' : reg = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
                    text.blank = '请输入邮箱';
                    text.error = '邮箱格式不正确';
-                   text.success = '正确'
+                   text.success = ''
     break;
 
     case 'password' : reg = /^[a-zA-Z0-9\x21-\x7e]{6,20}$/;
                       text.blank = '请输入密码';
                       text.error = '密码必须输入6-20个字符';
-                      text.success = '正确'
+                      text.success = ''
     break;
 
 
     default : reg = /^\w{6,20}$/;
               text.blank = '输入为空';
               text.error = '必须输入6-20个字符';
-              text.success = '正确'
+              text.success = ''
     break;
   }
 
@@ -45,7 +45,7 @@ function confirmPassword(obj) {
   var text = {
     blank     : '请输入确认密码',
     different : '两次输入的密码不一致',
-    success   : '两次输入密码一致'
+    success   : ''
   }
   if (obj.val() === '') {
     obj.removeClass('success').addClass('error').siblings('p').text(text.blank)
@@ -61,7 +61,7 @@ function confirmVerfCode(obj) {
  var text = {
   blank: '请输入验证码',
   different : '验证码输入错误',
-  success : '正确',
+  success : '',
 
  }
   if (obj.val() === '') {
