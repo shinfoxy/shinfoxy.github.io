@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>列车查询表</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://cdn.bootcss.com/jquery-mobile/1.4.5/jquery.mobile.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
+</head>
+<body>
+<!-- index -->
+<div data-role="page" id="index">
+  <div data-role="header" data-position="fixed">
+    <h1>列车查询表</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <form action="">
+      <div class="ui-field-contain">
+        <label for="">发车站</label>
+        <input type="text" name="" id="searchBegin">
+      </div>
+      <div class="ui-field-contain">
+        <label for="">到达站</label>
+        <input type="text" name="" id="searchEnd">
+      </div>
+      <div class="ui-field-contain">
+        <label for="">车次</label>
+        <input type="text" name="" id="searchNo">
+      </div>
+      <input type="button" value="搜索" id="searchSubmit">
+      <ul data-role="listview" data-inset="true" id="list"></ul>
+    </form>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#" data-icon="grid" class="ui-btn-active">查询</a></li>
+        <li><a href="#" data-icon="grid">查询</a></li>
+        <li><a href="#" data-icon="grid">查询</a></li>
+        <li><a href="#" data-icon="grid">查询</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- detail -->
+<div data-role="page" id="detail">
+  <div data-role="header" data-position="fixed">
+    <h1>毛毛列车查询表</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <h2></h2>
+    <table data-role="table" data-mode="reflow" class="ui-responsive" id="movie-table">
+      <thead>
+        <tr>
+          <th data-priority="1">站名</th>
+          <th data-priority="persist">到站时间</th>
+          <th data-priority="persist">出发时间</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <a data-rel="back" href="#" class="ui-btn ui-corner-all">返回</a>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#" data-icon="grid" class="ui-btn-active">查询</a></li>
+        <li><a href="#" data-icon="grid">查询</a></li>
+        <li><a href="#" data-icon="grid">查询</a></li>
+        <li><a href="#" data-icon="grid">查询</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
+<script src="script/main.js"></script>
+
+</body>
+
+</html>
