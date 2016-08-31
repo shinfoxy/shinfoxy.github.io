@@ -11,59 +11,66 @@
 <body>
 
 <div class="wrap">
-  <div class="title">
-    <h2>表单验证</h2>
-  </div>
   <div class="container">
-    <div class="register">
-      <form action="" >
-        <div class="register_box">
-          <input id="phone" type="tel" maxlength="11" placeholder="请输入手机号" autocomplete="off">
-          <p></p>
-        </div>
-        <div class="register_box">
-          <input id="verfCode" type="text"  placeholder="验证码">
-          <a href="javascript:;">获取验证码</a>
-          <p></p>
-        </div>
-        <div class="register_box">
-          <input id="email" type="email" placeholder="请输入邮箱" autocomplete="off">
-          <p></p>
-        </div>
-        <div class="register_box">
-          <input id="password" type="password"  placeholder="请输入6-20个字符">
-          <p></p>
-        </div>
-        <div class="register_box">
-          <input id="confirmPassword" type="password"  placeholder="请再次输入密码">
-          <p></p>
-        </div>
-       
-        <div class="register_box">
-          <button class="btn btn-submit" type="submit" id="doReg">立即注册</button>
-        </div>
-      </form>
+    <div class="title">
+      <h2>表单验证</h2>
     </div>
-    <div class="login">
-      <form action="" >
-        <div class="register_box"></div>
-        <div class="register_box"></div>
-      </form>
+    <div class="J_tab">
+      <div class="tab_wrap">
+        <ul class="tab_list">
+          <li class="J_tab-menu">注册</li>
+          <li class="J_tab-menu">登录</li>
+          <span class="tabBar"></span>
+        </ul>
+      </div>
+      <div class="form-container">
+        <div class="J_tab-content register">
+          <form action="" >
+            <div class="register_box">
+              <input id="phone" type="tel" maxlength="11" placeholder="请输入手机号" autocomplete="off">
+              <p></p>
+            </div>
+            <div class="register_box">
+              <input id="verfCode" type="text"  placeholder="验证码">
+              <a href="javascript:;">获取验证码</a>
+              <p></p>
+            </div>
+            <div class="register_box">
+              <input id="email" type="email" placeholder="请输入邮箱" autocomplete="off">
+              <p></p>
+            </div>
+            <div class="register_box">
+              <input id="password" type="password"  placeholder="请输入6-20个字符">
+              <p></p>
+            </div>
+            <div class="register_box">
+              <input id="confirmPassword" type="password"  placeholder="请再次输入密码">
+              <p></p>
+            </div>
+            <div class="register_box">
+              <button class="btn btn-submit" type="submit" id="doReg">立即注册</button>
+            </div>
+          </form>
+        </div>
+        <div class="J_tab-content login">
+          <form action="" >
+            <div class="register_box">
+              <input type="tel" maxlength="11" placeholder="请输入手机号" autocomplete="off">
+            </div>
+            <div class="register_box">
+              <input type="password"  placeholder="请输入6-20个字符">
+            </div>
+            <div class="register_box">
+              <button class="btn btn-submit" type="submit" id="doReg">登录</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
+    
 </div>
-<div class="J_tab">
-  <ul class="tab-menuWrapper">
-    <li class="J_tab-menu">menu1</li>
-    <li class="J_tab-menu">menu2</li>
-    <li class="J_tab-menu">menu3</li>
-  </ul>
-  <div class="tab-contentWrapper">
-    <div class="J_tab-content">content1</div>
-    <div class="J_tab-content">content2</div>
-    <div class="J_tab-content">content3</div>
-  </div>
-</div>
+
 
 
 <script src="script/base.js"></script>
@@ -75,7 +82,7 @@ var tabs = document.getElementsByClassName('J_tab');
   new Tab({
     root: tabs[0],
     // trigger: 'mouseover',
-    // currentClass: 'tabcurrentMenu',
+    currentClass: 'active',
     // isAutoPlay: true,
   });
 </script>

@@ -11,11 +11,16 @@ function Tab(config) {
   var playTime      = config.playTime || 3000;
 
   this.tabMenus     = this.root.getElementsByClassName('J_tab-menu');
-  if (this.currentClass) {
-    DomUtil.addClass(this.tabMenus[this.currentIndex],this.currentClass);
-  }
   this.tabContents  = this.root.getElementsByClassName('J_tab-content');
-  this.tabContents[this.currentIndex].style.display = 'block';
+
+  for( var i = 0; i < this.tabContents.length; i++) {
+    if (this.currentClass) {
+      DomUtil.addClass(this.tabMenus[this.currentIndex],this.currentClass);
+    }
+    this.tabContents[i].style.display = 'none';
+    this.tabContents[this.currentIndex].style.display = 'block';
+  }
+  
 
   if(isAutoPlay) {
     this.autoPlayTimer = setInterval(function(){
