@@ -11,14 +11,15 @@ p {
   margin: 0;
 }
 .wrap {
-  width: 480px;
-  margin: 0 auto;
+
+  text-align: center;
 
 }
 .register {
   display: inline-block;
-  padding: 20px 120px;
-  padding-top: 40px;
+  margin: 0 auto;
+  padding: 40px 120px 20px;
+  /*box-sizing: border-box;*/
   border: 1px solid #aaa;
   box-sizing: border-box;
 
@@ -119,4 +120,10 @@ p {
 }
 .register_box .disabled {
   cursor: not-allowed;
+}
+
+@media only screen and (max-width: 479px) {
+  .register {
+    padding: 0 calc(50% - 138px);
+  }
 }

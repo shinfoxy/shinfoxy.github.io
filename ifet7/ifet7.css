@@ -10,6 +10,50 @@ bf4f49  red
 
 /* @workaround 上海活动  两端对齐*/
 
+/* reset */
+/* CSS RESET */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var {
+  font-weight: normal;
+  font-style: normal;
+}
+
+ol,ul {
+  list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+abbr, acronym, a {
+  text-decoration: none;
+}
+input {
+  border: 0;
+  padding: 2px;
+  outline: none;
+  color: #bcbcbc;
+}
+
+
+/* reset END*/
 body {
   font-size: 87.5%;
   font-family: "Helvetica Neue",Helvetica,STHeiTi,"Microsoft YaHei",sans-serif;
@@ -26,11 +70,11 @@ body {
   display: table;
   clear: both;
 }
-.wrap {
+/*.wrap {
   width: 100%;
   min-width: 1280px;
   margin: 0 auto;
-}
+}*/
 /* cover */
 .cover {
   position: absolute;
@@ -42,7 +86,8 @@ body {
 }
 /* g-header */
 .g-header {
-  padding: 0 60px;
+  width: 90%;
+  margin: 0 auto;
 }
 .logo {
   float: left;
@@ -111,6 +156,9 @@ body {
   color: #e74f4d;
 }
 
+.g-sm-nav {
+  display: none;
+}
 /* g-footer */
 .g-footer .container {
   padding: 92px 384px;
@@ -210,8 +258,8 @@ body {
 }
 .banner .text {
   position: absolute;
-  top: 232px;
-  left: 128px;
+  top: 18%;
+  left: 13%;
   color: #fff;
 
 }
@@ -294,8 +342,7 @@ body {
 .city {
   position: relative;
   background: url(images/map.jpg) left bottom no-repeat;
-  background-size: cover;
-  height: 340px;
+  height: 328px;
 }
 .city .cover {
   background-color: #aa3533;
@@ -332,7 +379,7 @@ body {
 
 /* form */
 .form {
-  width: 1030px;
+  width: 84%;
   margin: 0 auto;
   margin-top: 38px;
   font-size: 0;
@@ -445,9 +492,9 @@ body {
   z-index: -1;
   float: left;
   width: 66%;
-  height: 563px;
 }
 .leftA img {
+  display: block;
   width: 100%;
 }
 .left-desc {
@@ -485,7 +532,7 @@ body {
 .rightA {
   float: left;
   width: 34%;
-  height: 563px;
+
 }
 .right-desc {
   padding: 168px 70px 0;
@@ -628,7 +675,8 @@ body {
 
 /* feedback */
 .feedback {
-  padding: 118px 138px 170px;
+  width: 90%;
+  margin: 0 auto
 }
 .title {
   text-align: center;
@@ -659,6 +707,11 @@ body {
   color: #aaa;
 }
 
+.notice {
+  max-width: 1004px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
 .notice-left {
   float: left;
   width: 294px;
@@ -743,4 +796,204 @@ body {
 .input-item-btn a {
   display: block;
   color: #231815;
+}
+
+
+@media only screen and (max-width: 479px) {
+  body {
+
+  }
+  .banner {
+    height: 200px;
+  }
+  .banner .text {
+    position: static;
+  }
+  .banner .text p,.banner .text h2 {
+    display: none;
+  }
+  .banner .text a {
+    position: absolute;
+    width: 50%;
+    margin: 0;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 8px;
+
+  }
+  .g-header {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .g-nav ul {
+    display: none;
+  }
+  .g-sm-nav {
+    float: right;
+    position: relative;
+  }
+  .g-nav .g-sm-nav ul {
+    position: absolute;
+    right: 0;
+    top: 52px;
+    width: 400px;
+    z-index: 99;
+  }
+  .g-nav .g-sm-nav ul li {
+    float: none;
+  }
+  .g-sm-nav {
+    display: block;
+  }
+  .feature {
+    padding-bottom: 20px;
+  }
+  .feature ul li {
+    float: none;
+  }
+  .feature ul li {
+    width: 100%;
+  }
+  .feature ul li p {
+    width: 80%;
+    padding-top: 60px;
+    margin-bottom: 30px;
+  }
+  .banner2 {
+    padding: 30px 0;
+  }
+  .banner2 img {
+    width: 40px;height: 40px;
+  }
+  .banner2 h3 {
+    padding-top: 20px;
+    font-size: 20px;
+  }
+  .city {
+
+  }
+  .form {
+    margin: 0 auto;
+  }
+  .form-item {
+    display: block;
+  }
+  .form-item:last-child {
+    margin-right: auto;
+  }
+  .form-item {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .form-item select {
+    /*width: 40px;*/
+  }
+  .activity {
+    height: auto;
+  }
+  .frame-bg {
+    /*width: 80%;*/
+    margin: 0 auto;
+  }
+  .activity .container {
+    width: 90%;
+    padding: 30px 0;
+  }
+  .activity ul.post li {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+  .other .left, .other .middle {
+    width: 100%;
+    height: 260px;
+  }
+  .other .right {
+    display: none;
+  }
+  .middle::after {
+    border: none;
+  }
+  .feedback {
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+  .title p {
+    width: 100%;
+  }
+  .notice {
+    margin-bottom: 20px;
+  }
+  .notice-left {
+    display: none;
+  }
+  .notice-right {
+    float: none;
+    width: 100%;
+  }
+  .input-item-md {
+    width: 100%;
+  }
+  .g-footer .container {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    padding: 5% 10%;
+    box-sizing: border-box;
+  }
+  .g-footer-submit {
+    width: 100%;
+  }
+  .g-footer-submit input {
+    float: left;
+    width: 68%;
+  }
+  .g-footer-submit a {
+    float: right;
+    width: 30%;
+  }
+  .g-footer-desc p {
+    width: 100%;
+  }
+  .g-footer-icon-group {
+
+  }
+  .g-footer-submit::before,.g-footer-submit::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .caro {
+    /*display: none;*/
+  }
+  .leftA {
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+  .rightA {
+    display: none;
+  }
+  .left-desc {
+    top: 20px;
+  }
+  .left-desc h1 {
+    font-size: 58px;
+  }
+  .left-desc h2 {
+    font-size: 30px;
+  }
+  .ft1 p::after, .ft2 p::after, .ft3 p::after {
+    display: none;
+  }
+
+}
 }
