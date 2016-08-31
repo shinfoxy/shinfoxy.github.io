@@ -144,7 +144,8 @@ $('#doReg').click(function(){
     }
   });
   if (isAllPass) {
-    alert('注册成功')
+    alert('注册成功');
+    window.location.href = "http://www.baidu.com"
   }
   return false;
 })

@@ -101,6 +101,8 @@ p {
   border-radius: 4px;
   background-color: #eee;
   text-align: center;
+  /*border: 1px solid #ddd;*/
+  box-sizing: border-box;
 }
 .register_box #verfCode ~ p {
   float: left;
